@@ -9,12 +9,13 @@ if(isset($_SESSION["cid"])){
 <head>
 	<meta charset="utf8">
 	<title>调度员登陆--随便送</title>
+	<script src="../js/jquery.js" type="text/javascript"></script>
 	<script src="../js/bootstrap.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"/>
 </head>
 
 <body>
-	<form class="form-horizontal" action="../php/login.php?type=controler" method="post">
+	<form class="form-horizontal" action="../php/login.php?type=controler" method="post" style="width:500px;margin:auto;">
 		<div class="control-group">
 			<h3>登陆订单调度管理界面</h3>
 			<label class="control-label" >用户名</label>
@@ -30,7 +31,7 @@ if(isset($_SESSION["cid"])){
 		</div>
 		<div class="control-group">
 			<div class="controls">
-				<button type="submit" class="btn">登陆</button>
+				<button type="submit" class="btn btn-primary">登陆</button>
 			</div>
 		</div>
 	</form>
