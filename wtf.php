@@ -2,6 +2,10 @@
 	//本网站是为了模拟用户点餐,用于讲电话短信点餐用户统一归入网站调度管理
 	require_once './php/linkDB.php';
 	session_start();
+	$temp_order = mysql_query("SELECT * FROM temp_order ORDER BY ID DESC LIMIT 1");
+	if($last_order = mysql_fetch_array($temp_order)){
+		$last_id = $last_order["ID"];
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,6 +64,7 @@
 </head>
 <body>
 	<div style="margin:0 5%;padding-bottom:200px;">
+	<h1>模拟用户下单(附中) 当前订单号:<?php echo ($last_id+1);?></h1>
 	<?php
 		echo '<ul class="nav nav-tabs">';
 		$sql = mysql_query("SELECT * FROM restaurant ORDER BY ID");
@@ -160,8 +165,7 @@
 						function(returnKey){
 							if(returnKey == 1){
 								alert("已下单");
-								cart.length = 0;
-								$("#orderList").html("");
+								window.location.href = "./wtf.php"; 
 							}else{
 								alert(returnKey);
 							}

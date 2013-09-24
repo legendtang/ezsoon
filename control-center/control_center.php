@@ -24,16 +24,16 @@ if(!isset($_SESSION["cid"])){
 		<h3>配餐员调度</h3>
 		<div class="control-group">
 			<div class="controls">
-				<button class="btn btn-info btn-large " onclick="window.location.href='./cater.php?zone=0';">配餐区   (一)</button>
-				<button class="btn btn-info btn-large " onclick="window.location.href='./cater.php?zone=1';">配餐区   (二)</button>
+				<button class="btn btn-info btn-large " onclick="window.location.href='./cater.php?zone=0';">华科商铺</button>
+				<button class="btn btn-info btn-large " onclick="window.location.href='./cater.php?zone=1';">光谷步行街(目前都在华科)</button>
 			</div>
 		</div>
 		<h3>送餐员调度</h3>
 		<div class="control-group">
 			<div class="controls">
-				<button class="btn btn-info btn-large " onclick="window.location.href='./sender.php?zone=0';">送餐区   (一)</button>
-				<button class="btn btn-info btn-large " onclick="window.location.href='./sender.php?zone=1';">送餐区   (二)</button>
-				<button class="btn btn-info btn-large " onclick="window.location.href='./sender.php?zone=2';">送餐区   (三)</button>
+				<button class="btn btn-info btn-large " onclick="window.location.href='./sender.php?zone=0';">韵苑送餐区</button>
+				<button class="btn btn-info btn-large " onclick="window.location.href='./sender.php?zone=1';">附中送餐区</button>
+				<button class="btn btn-info btn-large " onclick="window.location.href='./sender.php?zone=2';">SBI送餐区</button>
 			</div>
 		</div>
 		<h3>订单整合按钮--危险</h3>
