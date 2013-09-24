@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn">
+<head>
+<meta charset="UTF-8">
+<title>输入框清除</title>
+
+<style>
+.inputstyle {
+	width: 258px;
+	position: relative;
+	top: 2px;
+	left: 2px;
+	height: 18px;
+	padding: 11px 0 11px 10px;
+	line-height: 18px;
+	border: none;
+	background: none;
+	color: #333;
+	font-family: Verdana,Tahoma,Arial;
+	font-size: 16px;
+	ime-mode: disabled;
+}
+.inputOuter {
+	width: 272px;
+	height: 42px;
+	background: url("./icon3.png") no-repeat -1px -1px;
+}
+.inputOuter_focus{
+	width: 272px;
+	height: 42px;
+	background: url("./icon3.png") no-repeat -1px -45px;
+}
+.input_tips{
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	font-size: 14px;
+	line-height: 16px;
+	color: #aaa;
+	cursor: text;
+}
+.uinArea {
+	height: 55px;
+	width:272px;
+	position: relative;
+	z-index: 10;
+}
+.uin_del {
+	width: 21px;
+	height: 21px;
+	cursor: pointer;
+	position: absolute;
+	right: 15px;
+	top: 10px;
+	background: url("./icon3.png") no-repeat -116px -160px;
+	display: none;
+}
+input:focus{
+	outline:none;
+}
+</style>
+<script type="text/javascript" src="http://beta.ezsoon.cn/js/jquery.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#u").keyup(function(){
+		if($("#u").val() != ''){
+			$("#uinArea .input_tips").css("display","none");
+			$("#uinArea .uin_del").css("display","block");
+		}else{
+			$("#uinArea .input_tips").css("display","block");
+			$("#uinArea .uin_del").css("display","none");
+		}
+	});
+	$("#u").focus(function(){
+		$("#uinArea .inputOuter").attr("class","inputOuter_focus");
+	});
+	$("#u").blur(function(){
+		$("#uinArea .inputOuter_focus").attr("class","inputOuter");
+	});
+	$("#uin_del").click(function(){
+		$("#u").val('');
+		$("#uinArea .input_tips").css("display","block");
+		$("#uin_del").css("display","none");
+		$("#u").focus();
+	});
+});
+</script>
+</head>
+<body>
+<div class="uinArea" id="uinArea" >
+    <label class="input_tips" id="uin_tips"  for="u">QQ号码/手机/邮箱</label>
+    <div class="inputOuter">
+		<input type="text" class="inputstyle"  id="u" name="u" value=""   tabindex="1"  /> 
+		<a class="uin_del" id="uin_del" href="javascript:void(0);"></a>
+    </div>
+</div> 
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+body{
+	background: #FFF; /* FFF团敬上 */
+}
+#front-bg{
+	display: block;
+	position:fixed;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index:-1;	
+}
+
+#front-bg > img{
+	margin: auto;
+	max-width: 100%;
+	max-height: 100%;
+	top: -80px;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#front-card{
+	position: absolute;
+	width: 1150px;
+	height: 410px;
+	margin: auto;
+	top: -20%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	*vertical-align:middle;
+}
+.front-welcome{
+	position: absolute;
+	width: 840px;
+	left: 0;
+	top: 0;
+	height: 410px;
+}
+.front-logo{
+	width: 566px;
+	height: 105px;
+	top: 0;
+	position: absolute;
+	background:url("../images/front-logo.png")
+}
+.front-signup,.front-signin{
+	width: 292px;
+	height: 343px;
+	position: absolute;
+	top: 80px;
+	left: 858px;
+}
+p{
+	margin: auto;
+	font: bold 15px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	cursor: pointer;
+}
+p.grey{
+	color: #bebdbc;
+	width: 51px;
+}
+p.abs{
+	position: absolute;
+	right: 10px;
+	width: 73px;
+}
+p.in-bl{
+	margin: 0
+}
+p.light{
+	color: #e8a233;
+	width: 64px;
+}
+h2{
+	color: #e7a145;
+	font: 24px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+}
+input{
+	width: 282px;
+	height: 38px;
+	margin: 7px 0;
+	border-radius: 5px;
+	border: 1px solid #c5c4c2;
+	text-indent: 9px;
+	font: bold 16px/32px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+}
+input[type="checkbox"]{
+	width: 13px;
+	height: 13px;
+	margin: 0;
+}
+
+.divider-small{
+	background: url(../images/icon.png) no-repeat -143px -262px;
+	width: 2px;
+	height: 20px;
+	margin: -5px 0;
+}
+
+/* text Clear */
+.crossClear {
+	background-image: url(../images/cross.png);
+	background-repeat: no-repeat;
+	background-position: 250px center;
+	background-size: 10% 73%;
+	padding-right: 10%;
+}
+.noTextClear {	
+	padding-right: 1%;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+#front-footer{
+	background: url(../images/footer.png) no-repeat;
+	min-width: 100%;
+	height: 86px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+a.gohome{
+	width: 143px;
+	height: 41px;
+	position: absolute;
+	right: 30px;
+	bottom: 20px; 
+	text-decoration: none;
+	border: none;
+	background: url(../images/icon.png) no-repeat 0 -17px;
+}
+a:hover.gohome,a:active.gohome{
+	background: url(../images/icon.png) no-repeat 0 -61px;
+}

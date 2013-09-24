@@ -1,0 +1,742 @@
+/* Gerneral */
+.left{
+	float: left;
+}
+.right{
+	float: right;
+}
+.in-bl{
+    display: inline-block;       //some standard browsers
+    zoom:1;
+    *display: inline;
+}
+/* End */
+
+/* NavBar */
+#navbar{
+	width: 100%;
+	height: 43px;
+	position: fixed;
+	top: 0;
+	background: #574632;
+	color: #e4cec1;
+	font: 15px/43px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei, helvetica, arial, sans-serif;
+	z-index: 999;
+}
+.welcome{
+	width: 30em;
+	height: 43px;
+	margin-left: 18px;
+}
+.range{
+	width: 30%;
+	height: 43px;
+	margin-right: 18px;
+	text-align: right;
+}
+/* End */
+body{
+	margin: 0;
+	padding: 0;
+}
+#background{
+	position: absolute;
+	top:0;
+	width:100%;
+	height:80%;
+	background:#ffc969;
+	z-index:-1;	
+}
+#background-bottom{
+	position: absolute;
+	width:100%;
+	height:14px;
+	top:80%;
+	background:url("../images/sawtooth.png");
+	z-index:-1;	
+}
+#content * {
+	float: left;
+	font-family: "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei, helvetica, arial, sans-serif;
+}
+#clear {
+	float: none;
+	clear: both;
+}
+#content{
+	`float: left;
+	width:960px;
+	background:#fff;
+	margin:auto;
+	`height:1500px;
+}
+#title{
+	width:100%;
+	height:150px;
+	background:#ffc969;
+	z-index: 998;
+}
+#logo{
+	width: 478px;
+	height: 85px;
+	position: absolute;
+	top: 55px;
+	left: 20px;
+	z-index: 998;
+	background: url(../images/logonew.png) no-repeat;
+}
+#showPC{
+	position: absolute;
+	right: 193px;
+	top: 70px;
+	background: url(../images/icon.png) no-repeat 0 -103px;
+	width: 170px;
+	height: 46px;
+}
+#showPC:hover,#showPC:active{
+	background: url(../images/icon.png) no-repeat 0 -153px;
+}
+.logout{
+	position: absolute;
+	right: 393px;
+	top: 70px;
+	width: 170px;
+	height: 46px;
+	background: url(../images/icon.png) no-repeat -170px -188px;
+}
+.logout:hover,.logout:active{
+	background: url(../images/icon.png) no-repeat -170px -237px;
+}
+#image-frame{
+	position: absolute;
+	z-index: 500;
+	width:100%;
+	height:14px;
+	top:150px;
+	background:url("../images/sawtooth.png");
+}
+`#subtitle{
+	width:400px;
+	height: 67px;
+	float:right;
+	`margin:0 50px 0 0;
+	font: 18px/67px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei, helvetica, arial, sans-serif;
+	color: #d5b296;
+	text-align:center;
+	`line-height: 67px;
+	`background:url(../images/subnimei.jpg) no-repeat;
+}
+`.divider{
+	width: 55px;
+	height: 66px;
+	position: relative;
+	margin: auto;
+	background:url(../images/divider.png) no-repeat;
+}
+`#nav{
+	width:960px;
+	height:70px;
+	background:#3b3029;
+	
+	color:#fff;
+}
+`#nav ul{
+	width:960px;
+	height:74px;
+	padding:0;
+	margin:0;
+}
+`#nav ul li{width:150px;
+	height:74px;
+	margin:3px 4px;
+	border-right:1px #fff solid;
+	line-height:74px;
+	font-size:20px;
+	text-align:center;
+}
+#topContent{
+	width:960px;
+	height:411px;
+	background:#000;
+}
+`#fader{
+	z-index: 1;
+}
+#main{
+	width:960px;
+	min-height:500px;
+	background: #fbfbfa;
+}
+#leftContent{
+	margin: 28px 2px 9px;
+	width:700px;
+	min-height:500px;
+	background:#fbfbfa;
+}
+#rightContent{
+	width:238px;
+	min-height:480px;
+	background:#f6f6f6;
+	border: 1px solid #dbdbdb;
+	color:#000;
+}
+p.inputips{
+	width: auto;
+	margin: auto;
+}
+p.inputips span{
+	font-weight: bold;
+	text-align: center;
+	float: none !important;
+}
+#footer{
+	width:960px;
+	height:45px;
+	margin:0 0 50px 0;
+	background:#82512f;
+	font-size: 13px;
+	color:#fff;
+}
+#footer p{
+	margin-left:10px !important;
+}
+p.flashlight span{
+	font-weight: bold;
+	color: #f17321;
+	float: none !important;
+}
+#leftfooter{
+	margin-left: 10px;
+	float: left;
+}
+#rightfooter{
+	float:right !important;
+	margin-right:15px;
+	height: 45px;
+}
+#rightfooter a {
+	margin:0 5px;
+	color: #fff;
+	line-height: 45px;
+	text-decoration:none;
+}
+#copyright{
+	width:960px;
+	height:46px;
+	background:#583e2d;
+}
+#copyright p{
+	margin-left: 20px !important;
+}
+.divider2 {
+	`margin-right: 30px;
+	width: 11px;
+	height: 45px;
+	`line-height: 45px;
+	background:url(../images/divider2.png) no-repeat;
+}
+.click{
+	display:block;
+	cursor:pointer;
+}
+/* ====================login ui======================== */
+#iwannabe{
+	width: 238px;
+	height: 87px;
+	background-color: #684026;
+	text-align: center;
+	color: #FFF;
+	font: bold 30px/87px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+}
+
+.return-home a{
+	width: 100%;
+	margin-top: 70px;
+	text-align: center;
+	font: 20px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	text-decoration: none;
+}
+.blank-cart{
+	width: 150px;
+	height: 196px;
+	background: url(../images/cart0.png) no-repeat;
+	margin: 100px 40px;
+}
+
+input, select {
+	font: lighter 12px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	width: 189px;
+	height: 34px;
+	margin: 8px 25px;
+	border-radius: 5px;
+	border: 1px solid #c5c4c2;
+	text-indent: 9px;
+}
+.btn{
+	width: 126px;
+	height: 40px;
+	text-decoration: none;
+	border: none;
+	padding: 0;
+	cursor: pointer;
+}
+.btn-signup{
+	background: url(../images/icon.png) no-repeat -8px -202px;
+	margin: 20px 80px auto;
+}
+.btn-signup:hover, .btn-signup:active{
+	background: url(../images/icon.png) no-repeat -8px -244px;
+}
+.btn-signin{
+	background: url(../images/icon.png) no-repeat -196px -42px;
+	padding:14px 0;
+}
+.btn-signin:hover, .btn-signin:active{
+	background: url(../images/icon.png) no-repeat -154px 0;
+}
+.btn-return{
+	background: url(../images/icon.png) no-repeat -266px -289px
+}
+.btn-return:hover, .btn-return:active{
+	background: url(../images/icon.png) no-repeat -266px -331px
+}
+#index_register.btn{
+	margin: 15px 10px;
+}
+
+#loginUI{
+	width: 238px;
+	margin-top: 60px;
+	`font: 16px/1.2 "SimSun" !important;
+}
+
+#login.click{
+	width: 169px;
+	height: 45px;
+	margin: 35px 35px;
+	background: url(../images/login.png) no-repeat;
+	text-align: center;
+}
+`#logout.click{
+	width: 161px;
+	height: 46px;
+	margin: 35px 39px;
+	background: url(../images/logout.png) no-repeat;
+	text-align: center;
+}
+#register.click{
+	width: 169px;
+	height: 45px;
+	margin: 35px 35px;
+	background: url(../images/signup.png) no-repeat;
+}
+#back_login.click{
+	width: 122px;
+	height: 41px;
+	margin: 15px 58px;
+	background: url(../images/back.png) no-repeat;
+}
+`#logout{
+	width: 100%;
+	margin: 25px auto;
+	text-align: center;
+}/*=============personal center===============*/
+#personal_center_bg,#view_order_bg{
+	position:fixed;
+	top:0;
+	width:100%;
+	height:100%;
+	background: #000;
+	opacity: 0.55;
+	filter: alpha(opacity=55);
+	z-index:998;
+	display:none;
+	-webkit-transition: height 0.35s ease;
+	   -moz-transition: height 0.35s ease;
+	     -o-transition: height 0.35s ease;
+	        transition: height 0.35s ease;
+}
+#personal_center{
+	position:fixed;
+	margin:auto;
+    left:0; right:0; top:0; bottom:0;
+	width:868px;
+	height:508px;
+	border-radius: 8px;
+	border: 1px solid grey;
+	background:#fff;
+	z-index:999;
+	display:none;
+	-webkit-transition: height 0.35s ease;
+	   -moz-transition: height 0.35s ease;
+	     -o-transition: height 0.35s ease;
+	        transition: height 0.35s ease;
+}
+#view_order{
+	position:fixed;
+	margin:auto;
+    left:0; right:0; top:0; bottom:0;
+	width:868px;
+	height:508px;
+	border-radius: 8px;
+	border: 1px solid grey;
+	background:#fff;
+	z-index:999;
+	display:none;
+}
+#personal_center > *{
+	float:left;
+	width:694px;
+	height:100%;
+}
+.disabled{
+	display:none;
+}
+#pc_nav{
+	display:block;
+	width:174px;
+	background: #f1f0eb;
+	border-bottom-left-radius: 8px;
+	border-top-left-radius: 8px;
+	text-align: center;
+	text-indent: 32px;
+}
+#pi.click{
+	margin-top: 80px;
+}
+#pc_nav > .click{
+	width: 100%;
+	height: 51px;
+	font: 17px/51px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	color: #848484;
+}
+#pc_nav > .click:hover,#pc_nav > .click:active{
+	background: #f9b946;
+	color: #FFF;
+}
+.pc-img{
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	margin-left: 40px;
+	margin-top: 15px;
+}
+.pi-img{
+	background: url(../images/icon.png) no-repeat -140px -236px;
+}
+.click:hover > .pi-img{
+	background: url(../images/icon.png) no-repeat -140px -214px;
+}
+.ho-img{
+	background: url(../images/icon.png) no-repeat -180px -125px;
+}
+.click:hover > .ho-img{
+	background: url(../images/icon.png) no-repeat -180px -94px;
+}
+.co-img{
+	background: url(../images/icon.png) no-repeat -225px -125px;
+}
+.click:hover > .co-img{
+	background: url(../images/icon.png) no-repeat -225px -94px;
+}
+.cp-img{
+	background: url(../images/icon.png) no-repeat -202px -125px;
+}
+.click:hover > .cp-img{
+	background: url(../images/icon.png) no-repeat -202px -94px;
+}
+#pc_top{
+	width: 670px;
+	height: 50px;
+	margin: 22px auto auto 24px;
+	text-indent: 48px;
+	font: 25px/50px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+}
+hr.hr-top{
+	width: 556px;
+	margin-left: 24px;
+	clear:both;
+	border-width:0;
+	border-top:1px solid #ccc;
+	border-bottom:1px solid #FFF;
+	height:2px;
+	overflow:hidden;
+}
+.pc_item{
+	width: 582px;
+	margin: 15px auto;
+	height: 50px;
+	font: 18px/50px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+}
+#change_info{
+	margin: 8px auto;
+}
+.pi_name{
+	width: 100px;
+	float: left;
+	font: 18px/50px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+}
+.collapse {
+	position: relative;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 0.35s ease;
+	   -moz-transition: height 0.35s ease;
+	     -o-transition: height 0.35s ease;
+	        transition: height 0.35s ease;
+}
+.collapse.in {
+	height: auto;
+}
+#accordion2 {
+	width: 572px;
+	height: 381px;
+	margin-left: 25px;
+	overflow-y: auto;
+}
+.accordion-group{
+	text-shadow: 0 0 0.5px #000;
+	letter-spacing: 1px;
+}
+.accordion-heading{
+	background: rgb(206,205,203);
+	height: 33px;
+	width: 100%;
+	font: 16px/33px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	text-indent: 15px;
+	border-bottom: 1px solid #FFF;
+}
+a.accordion-toggle{
+	list-style: none;
+	border-style: none;
+	text-decoration: none;
+	color: #FFF;
+	text-shadow: 0 0 1px #FFF;
+}
+.accordion-inner td {
+	width: 142px;
+	text-align: center;
+	height: 39px;
+	color: grey;
+	font: 16px/39px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	text-shadow: 0 0 1px grey;
+}
+.accordion-inner tr{
+	display: block;
+	border-bottom: solid 1px #c0c0c0;
+}
+.accordion-inner p {
+	text-indent: 20px;
+	font: bold 16px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	color: grey;
+}
+.accordion-inner span{
+	color: rgb(229,113,2);
+	font-size: 20px;
+}
+.accordion-inner table{
+	margin: 0;
+	padding: 0;
+	border-spacing: 0;
+}
+.fuckinClipart tr{
+	background: rgb(206,205,203);
+	margin: 0;
+	padding: 0;
+	border:none;
+}
+.fuckinClipart td{
+	color: #FFF;
+	margin: 0;
+	padding: 0;
+	border: 1px solid #FFF;
+	text-shadow: 0 0 1px #FFF;
+}
+hr.hr-content{
+	width: 95%;
+	text-align: center;
+	clear:both;
+	border-width:0;
+	border-top:1px solid rgb(229,113,2);
+	border-bottom:1px solid #FFF;
+	height:1px;
+	overflow:hidden;
+}
+/*=============shopping cart===============*/
+#cart{
+	margin:0;
+	padding:0;
+}
+#cart li{
+	display:block;
+	width:240px;
+	margin:0;
+	padding:0;
+}
+#cart li > div{
+	width:220px;
+}
+.orderTop{
+	width: 237px !important;
+	height: 45px !important;
+	border-bottom: 1px solid #dad4d0;
+	border-left: 1px solid #a3a3a3;
+	border-right: 1px solid #a3a3a3;
+}
+.foodName{
+	width: 187px;
+	height: inherit;
+	text-align: left;
+	text-indent: 20px;
+	font: 17px/45px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei; 
+	overflow:hidden;
+}
+.orderBottom{
+	width: 237px !important;
+	height: 49px;
+	line-height:49px;
+	border-bottom: 1px solid #a3a3a3;
+	border-left: 1px solid #a3a3a3;
+	border-right: 1px solid #a3a3a3;
+}
+.foodCost{
+	width: 93px;
+	height: inherit;
+	line-height: 49px;
+	text-align: left;
+	text-indent: 20px;
+}
+.delN{
+	width: 48px;
+	height:inherit;
+}
+.delN > img{
+	width: 25px;
+	height: 25px;
+	margin: 10px;
+}
+.foodNum{
+	width: 120px;
+	height: inherit;
+	padding-left: 10px;
+}
+.foodNum input{
+	height:36px;
+	width:30px;
+	margin:5px;
+}
+.changeNum,.changeNumL{
+	height:40px;
+	width:18px;
+}
+.changeNum > img{
+	width: 18px;
+	height: 15px;
+	margin: 5px 0;
+}
+.changeNumL > img{
+	width: 18px;
+	height: 15px;
+	margin: 5px 0;
+}
+#pay{
+	width: 240px;
+	height: 58px;
+	background: #db791b;
+	color: #FFF;
+	font: bold 30px/58px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei; 
+	margin-top: 40px;
+	text-align: center;
+}
+
+/*==========Scrollbar===========*/
+::-webkit-scrollbar {
+    width:17px;
+	height:17px;
+	background-color:#f0f0f0;
+	border:none;
+}
+::-webkit-scrollbar-thumb {
+    background-color:#cdcdcd;
+    border:1px solid #f0f0f0
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color:#dadada
+}
+::-webkit-scrollbar-thumb:active {
+    background-color:#606060
+}
+::-webkit-scrollbar-thumb:disabled {
+    background-color:#f9f9f9
+}
+::-webkit-scrollbar-corner {
+    background-color:#f0f0f0
+}
+::-webkit-scrollbar-button {
+    background-color:#f0f0f0;
+    background-image:url(../images/win8-scrollbar.png);
+    background-repeat:no-repeat
+}
+::-webkit-scrollbar-button:vertical {
+    height:33px
+}
+::-webkit-scrollbar-button:horizontal {
+    width:33px
+}
+::-webkit-scrollbar-button:horizontal:increment {
+    background-position:0 -444px
+}
+::-webkit-scrollbar-button:horizontal:decrement {
+    background-position:12px -425px
+}
+::-webkit-scrollbar-button:vertical:increment {
+    background-position:-1px -391px
+}
+::-webkit-scrollbar-button:vertical:decrement {
+    background-position:-1px -358px
+}
+::-webkit-scrollbar-button:hover {
+    background-color:#dadada
+}
+::-webkit-scrollbar-button:horizontal:increment:hover {
+    background-position:0 -548px
+}
+::-webkit-scrollbar-button:horizontal:decrement:hover {
+    background-position:12px -529px
+}
+::-webkit-scrollbar-button:vertical:increment:hover {
+    background-position:-1px -495px
+}
+::-webkit-scrollbar-button:vertical:decrement:hover {
+    background-position:-1px -462px
+}
+::-webkit-scrollbar-button:active {
+    background-color:#606060
+}
+::-webkit-scrollbar-button:horizontal:increment:active {
+    background-position:0 -652px
+}
+::-webkit-scrollbar-button:horizontal:decrement:active {
+    background-position:12px -633px
+}
+::-webkit-scrollbar-button:vertical:increment:active {
+    background-position:-1px -599px
+}
+::-webkit-scrollbar-button:vertical:decrement:active {
+    background-position:-1px -566px
+}
+::-webkit-scrollbar-button:disabled {
+    background-color:#f9f9f9
+}
+::-webkit-scrollbar-button:horizontal:increment:disabled {
+    background-position:0 -756px
+}
+::-webkit-scrollbar-button:horizontal:decrement:disabled {
+    background-position:12px -737px
+}
+::-webkit-scrollbar-button:vertical:increment:disabled {
+    background-position:-1px -703px
+}
+::-webkit-scrollbar-button:vertical:decrement:disabled {
+    background-position:-1px -670px
+}

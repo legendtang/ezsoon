@@ -1,0 +1,122 @@
+#content{
+	`height:1120px;
+}
+#type-nav{
+	padding:0;
+	margin: 0;
+	margin-bottom: 5px;
+}
+#menu{
+	margin-left: 3px;
+	height:600px;
+	width:708px;
+	overflow-y:scroll;
+	border: 1px solid #dbdbdb;
+	box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 5px rgba(0, 0, 0, 0.06) inset;
+}
+#menu ul{
+	margin: 0;
+	width:680px;
+}
+#topContent *{
+	position:absolute;
+}
+#shopLogo{
+	bottom:130px;
+	width:455px;
+	height:87px;
+	margin-bottom:5px;
+}
+#topContent p{
+	bottom:-20px;
+	`display:block;
+	width:725px;
+	height:100px;
+	color: #FFF;
+	text-indent: 1em;
+	font: 20px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei; 
+	padding: 15px;
+    background:#583e2d;
+    opacity:0.55;
+    filter: alpha(opacity=55);
+}
+#topContent p span{
+	margin-left:50px;
+	text-indent:0;
+	background:#f00;
+}
+#type-nav li{
+	display:block;
+	height:65px;
+	width:139px;
+	background: #c0c0c0;
+	font: 24px/65px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+	`border:1px solid;
+}
+#type-nav li > a{
+	width:139px;
+	text-align:center;
+	text-decoration: none;
+	color: #FFF;
+}
+.navBar{
+	margin: auto 1px 3px 3px;
+}
+.actBar{
+	cursor: pointer;
+	width: inherit;
+	position: relative;
+	background: #ec8b2e !important;
+	height: 7px;
+	z-index: 999px;
+}
+
+#leftContent{
+	margin: 1px auto 28px 0;
+	width: 720px;
+}
+
+#menu > ul{
+	padding: 0;
+	list-style: circle;
+}
+
+#menu ul > li{
+	`display: -moz-inline-stack;  //Firefox only code
+    display: inline-block;       //some standard browsers
+    zoom: 1;                     //IE only
+    *display: inline;            //Only IE know this code (CSS Hack)
+	width: 225px !important;
+	height: 50px;
+	font: 18px/50px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei !important;
+}
+#menu ul li > p{
+	max-width: 155px;
+	margin: 0;
+}
+#menu ul li > span{
+	float: none;
+	color: #a9580b;
+}
+.item{
+	color:#c0c0c0; 
+	padding-left: 10px;
+	width: 215px !important;
+	list-style: none;
+}
+.available:hover{
+	color:#ec8b2e;
+}
+.available{
+	color:#000;
+	cursor: pointer;
+}
+.subNav{
+	width: 690px;
+	height: 42px;
+	text-align: center;
+	background: #feebbc;
+	`list-style: circle;
+	color: #d67b45;
+	font: 22px/42px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+}

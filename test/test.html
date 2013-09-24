@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test for EzAlert();</title>
+	<script type="text/javascript" src="http://beta.ezsoon.cn/js/jquery.js"></script>
+	<script type="text/javascript">
+	function ezalert(content) {
+		$('body').append('<div id="ezalert_overlay"></div>' + 
+			'<div id="ezalert_container">' + 
+			'<div id="ezalert_content"></div>' + 
+			'</div>');
+		$('#ezalert_content').html(content);
+		setTimeout('$("#ezalert_overlay,#ezalert_container,#ezalert_content").remove()',2000);
+	};
+	</script>
+	<style type="text/css">
+		#ezalert_overlay{
+			position: fixed;
+			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width:100%;
+			height:100%;
+			background: #000;
+			opacity: 0.55;
+			filter: alpha(opacity=55);
+			z-index:9998;
+		}
+		#ezalert_container{
+			position: fixed;
+			margin: auto;
+			top: -75%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 240px;
+			height: 60px;
+			border-radius: 30px;
+			border: 2px solid #c0c0c0;
+			background: #f4f4f2;
+			z-index: 9999;
+		}
+		#ezalert_content{
+			position: absolute;
+			margin: auto;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			font: bold 17px/51px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei;
+			width: 150px;
+			height: 50px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	Suck API: <br />
+	input in console: <br />
+	ezalert('Your content');
+</body>
+</html>

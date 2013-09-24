@@ -1,0 +1,274 @@
+
+#topContent{
+	height:294px;
+	background:#c0c0c0;
+	background: url(../images/order.png) no-repeat;
+}
+#orderView{
+	width: 914px;
+	min-height: 321px;
+	height: auto;
+	`background: #fcfbfa;
+	margin: 20px 0 0 !important;
+	padding: 0 23px;
+}
+#orderNav {
+	`margin-left: 62px;
+	`padding: 0;
+	`margin: 20px 0 0 !important;
+}
+#orderNav li{
+	display: -moz-inline-stack;  //Firefox only code
+    display: inline-block;       //some standard browsers
+    zoom: 1;                     //IE only
+    *display: inline;            //Only IE know this code (CSS Hack)
+	`width:130px;
+	height: 50px;
+	color: #fff;
+	font:24px/50px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+	text-align:center;
+	`margin-right: 104px;
+	background: #ec8b2e;
+	border-right: 1px #fff solid;
+	`margin-left: 0;
+	`padding: 0;
+	`margin: 0;
+}
+.orderList div{
+	display: -moz-inline-stack;  //Firefox only code
+    display: inline-block;       //some standard browsers
+    zoom: 1;                     //IE only
+    *display: inline;            //Only IE know this code (CSS Hack)
+	width:130px;
+	text-align:center;
+	background: #fcfbfa;
+	border-bottom: 1px #d7d6d5 solid;
+}
+#orderNav,.orderList,#orderInfo{
+	width:914px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+}
+.name{
+	width: 235px;
+	height: inherit;
+	border-left: 1px #ebebeb solid;
+	font: 18px/50px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+	text-align: left !important;
+	text-indent: 27px;
+}
+.num{
+	width: 160px;
+	height: inherit;
+	line-height: 10px;
+}
+.changeNum{
+	padding-top: 10px;
+	line-height: 
+}
+.del{
+	width: 121px;
+	height:inherit;
+	`display: inline-block;
+	float:left !important;
+}
+.del > img{
+	width: auto;
+	height: auto;
+	margin: 10px 45px;
+}
+.credits{
+	width: 109;
+	height: inherit;
+	color: #a9580b;
+	font: 18px/50px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+.price{
+	width: 141px;
+	height: inherit;
+	color: #a9580b;
+	font: bold 18px/50px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+.cost{
+	width: 145px;
+	border-right:1px #ededed solid;
+	height: inherit;
+	color: #a9580b;
+	font: bold 18px/50px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+#orderResult{
+	`float: left;
+	width: 911px;
+	min-height: 216px;
+	background: #fcfbfa;
+	border-width: 0 1px 1px 1px;
+	border-color: #ededed;
+	border-style: solid;
+}
+#orderMore{
+	width: 212px;
+	height: 48px;
+	background: url(../images/continueOrder.png) no-repeat;
+	margin: 30px auto auto 25px;
+}
+#resultView {
+	width: 250px;
+	margin: 70px 40px auto auto;
+	float: right !important;
+	color: #4e3423;
+	font: 24px/50px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+.finalPrice {
+	float: left !important;
+}
+.finalPrice > span{
+	float: none !important;
+	color: #e67102;
+	font: bold 26px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+#orderInfo{
+	min-height:520px;
+	height: auto !important;
+	padding: 0 24px;
+	margin-bottom: 200px;
+}
+.addressInfo{
+	width: 912px;
+	height: 70px;
+	color: #4e3423;
+	background: #fcfbfa;
+	text-indent: 25px;
+	font: 24px/70px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+.addressInfo > span{
+	float: none !important;
+	font-weight: bold;
+}
+.addressInfo > select{
+	width: 233px;
+	height: 45px;
+	margin: 10px 5px 10px 29px;
+	text-align: left;
+	text-indent: 5px;
+	font: 24px/45px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+.addressInfo > input[type="text"]{
+	width: 233px;
+	height: 45px;
+	text-align: left;
+	text-indent: 5px;
+	font: 24px/45px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+#sendTime{
+	width: 219px;
+	height: 45px;
+	font: 20px/45px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+	float: none !important;
+}
+#confirm{
+	width: 912px;
+	height: 105px;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+	border: 1px #c7c7c7 solid;
+	background: #f6f5f3;
+	margin-bottom: 200px;
+	line-height: 105px; 
+}
+#infoNav{
+	font:24px/50px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+	width: 912px;
+	height: 50px;
+	color: #fff;
+	background: #ec8b2e;
+	text-indent: 64px;
+}
+.active{
+	color:red;
+}
+.orderList li div{
+	line-height:56px;
+}
+.num input{
+	width:30px;
+	margin:10px 10px 10px 50px;
+}
+#submit{
+	position: relative;
+	top: 20px;
+	left: 170px;
+	background: url(../images/submitOrder.png) no-repeat;
+	width: 261px;
+	height: 67px;
+	`float: none;
+}
+.radio > input[type="radio"] {
+	margin-left: 50px;
+	height: 70px;
+	line-height: 70px;
+}
+textarea#otherInfo {
+	position: relative;
+	top: 20px;
+	left: 40px;
+	width: 450px;
+	height: 67px;
+	padding: 5px;
+	text-align: left;
+	font: 24px/1 Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+/* order confirm */
+#order-card{
+	width: 710px;
+	height: 480px;
+	margin: 47px 79px;
+}
+.resultView{
+	width: 158px !important;
+	font: 19px/36px Microsoft Yahei, STheiti, WenQuanYi Micro Hei !important;
+	margin: auto !important;
+}
+.order-title{
+	color: rgb(242,178,55);
+	font: bold 20px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+.order-title > span{
+	color:rgb(135,135,135);
+	margin-left: 10px;
+}
+.order-address{
+	color:rgb(135,135,135);
+	font: bold 19px Microsoft Yahei, STheiti, WenQuanYi Micro Hei;
+}
+hr{
+	width: 100%;
+	margin: auto;
+	clear:both;
+	border-width:0;
+	border-top:1px solid rgb(248,233,204);
+	border-bottom:1px solid #FFF;
+	height:2px;
+	overflow:hidden;
+}
+.accordion-inner {
+	height: 162px;
+	overflow: auto;
+}
+.accordion-inner td {
+	width: 171px;
+}
+#finish-order {
+	width: 760px;
+	height: 400px;
+	margin: 50px 100px;
+}
+.finish-title {
+	width: 100%;
+	height: 50px;
+ 	color: rgb(248,185,71);
+	font: 35px/50px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei, helvetica, arial, sans-serif;
+}
+#finish-order p {
+	width: 100%;
+	font: 25px "Microsoft Yahei UI Light", "Microsoft JhengHei", STheiti, WenQuanYi Micro Hei, helvetica, arial, sans-serif;;
+}
