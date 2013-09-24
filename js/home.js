@@ -1,7 +1,6 @@
 window.onload = function(){
 	$("#rightContent").on('click',"#login",function(){login()});
 	$("#rightContent").on('click',"#register",function(){register()});
-	$("#title").on('click',"#logout",function(){logout();});
 	$("#rightContent").on('click',"#back_login",function(){backLogin()});
 	$("#rightContent").on('click',".delN",function(){delOrder($(this).attr("name"))});
 	$("#rightContent").on('click',".up",function(){up($(this).attr("name"))});

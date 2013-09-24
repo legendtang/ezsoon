@@ -1,6 +1,7 @@
 var cart = new Array();//0:id 1:name 2:num 3:price
-window.onload = function(){
+$(document).ready(function(){
 	select_add();
+	change_sendTime();
 	bind_event();
 	$("#orderView").on('click',".del",function(){delOrderL($(this).attr("name"))});
 	$("#orderView").on('click',".up",function(){upL($(this).attr("name"));});
@@ -17,7 +18,7 @@ window.onload = function(){
 			$("html,body").animate({scrollTop:a.top},500);
 		}
 	});
-	$("#zone").change(function(){select_add();});
+	$("#zone").change(function(){select_add();change_sendTime();});
 	$("#sendTime").change(function(){check_time();});
 	$("#view_order").on("click","#change_submit",function(event){
 		$("#view_order,#view_order_bg").css("display","none");
@@ -26,7 +27,7 @@ window.onload = function(){
 		event.preventDefault();
 		submit();
 	});
-}
+});
 function delOrderL(id){
 	$.ajax({
 		type: "POST",
@@ -95,13 +96,14 @@ function confirm_order(){
 	var half = $("#sendTime").val()%2?'30':'00';
 	str += '<div id="order-card"><p class="order-title">订餐人信息:</p>';
 	str += '<p class="order-address">'+name+'，'+sendAdd+'，'+phone+'</p><hr />';
-	str += '<p class="order-title">送出时间:<span>'+hour+':'+half+'</span></p>';
-	str += '<div class="accordion-inner"><table><thead class="fuckinClipart"><tr><td>购物车商品</td><td>数量</td><td>单价</td><td>金额</td></tr></thead><tbody>';
+	str += '<p class="order-title">送出时间:<span>'+hour+':'+half+'</span></p><hr />';
+	str += '<p class="order-title">订餐清单</p>';
+	str += '<table><thead><tr><td>购物车商品</td><td>数量</td><td>单价</td><td>金额</td></tr></thead><tbody>';
 	for(var i in cart){
 		str += '<tr><td>'+cart[i][1]+'</td><td>'+cart[i][2]+'</td><td>'+cart[i][3]+'</td><td>'+cart[i][2]*cart[i][3]+'</td></tr>';
 		total += cart[i][2]*cart[i][3];
 	}
-	str += '</tbody></table></div><div id="resultView" class="resultView"><div class="finalPrice">合计：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥'+total;
+	str += '</tbody></table><div id="resultView"><div class="finalPrice">合计：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥'+total;
 	str += '</div><div class="finalPrice">运费：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;￥2.00</div><div class="finalPrice">总计：&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span>￥'+(total+2)+'</span></div>';
 	str += '<button id="change_submit" type="button">再去改改</button><button id="confirm_submit">确认订单</button>';
 	$("#view_order").html(str);
@@ -139,7 +141,7 @@ function submit(){
 			if(returnKey == 1){
 				var hour = Math.floor($("#sendTime").val()/2);
 				var half = $("#sendTime").val()%2?'30':'00';
-				var str = '<div id="finish-order"><div class="finish-title">完成订单！5秒后自动返回首页</div><hr /><p>您的订单已下达,我们将于'+hour+':'+half+'准时送出.</p><p>请保持您的电话通畅,感谢您的使用！若需查看订单请点击“个人中心”查看</p></div><meta http-equiv="refresh" content="5;url="/"">';
+				var str = '<p>完成订单</p><p>您的订单已下达,我们将于'+hour+':'+half+'准时送出.</p><p>请保持您的电话通畅,感谢您的使用!</p>想查看您的订单?请去<span class="showPC click">个人中心</span>查看!<span class="home click">返回首页</span></p>'
 				$("#main").html(str);
 				$("#view_order,#view_order_bg").css("display","none");
 			}else{
@@ -157,7 +159,31 @@ function select_add(){
     $("#add").html("");  
     for(var i=0;i < add[zone].length;i ++){  
         $("#add").append("<option>"+add[zone][i]+"</option>");     
-    }  
+    } 
+}
+function change_sendTime(){
+	var today = new Date();
+	var h = today.getHours();
+	var half = today.getMinutes()>30?1:0;
+	var timeSection = h*2+half; 
+	$("#sendTime").html("");
+	if(zone == "华科附中"){
+		var fz_timeSection = ['<option value = "23">11:30</option>','<option value = "35">17:30</option>'];
+		var i =0;
+		if(timeSection >= 23){
+			i = 1;
+		}else if(timeSection >= 35){
+			i = 2;
+		}
+		
+		for(;i<fz_timeSection.length;i++)
+			$("#sendTime").append(fz_timeSection[i]);
+	}else{
+		var other_timeSection = ['<option value = "21">10:30</option>','<option value = "22">11:00</option>','<option value = "23">11:30</option>','<option value = "24">12:00</option>','<option value = "25">12:30</option>','<option value = "26">13:00</option>','<option value = "27">13:30</option>','<option value = "28">14:00</option>','<option value = "29">14:30</option>','<option value = "30">15:00</option>','<option value = "31">15:30</option>','<option value = "32">16:00</option>','<option value = "33">16:30</option>','<option value = "34">17:00</option>','<option value = "35">17:30</option>','<option value = "36">18:00</option>','<option value = "37">18:30</option>','<option value = "38">19:00</option>','<option value = "39">19:30</option>','<option value = "40">20:00</option>'];
+		for(var i = timeSection-20;i < other_timeSection.length;i++){
+			$("#sendTime").append(other_timeSection[i]);
+		}
+	}
 }
 function check_time(){
 	var order_time = $("#sendTime").val();

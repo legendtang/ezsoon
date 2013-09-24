@@ -11,7 +11,6 @@ if(isset($_SESSION["uid"])){
 	$phone = $user["phone"];
 	$name = $user["name"];
 	$gender = $user["gender"];
-	echo '<script type="text/javascript" src="js/bootstrap.js"></script>';
 
 if(isset($_POST["type"])){
 	switch($_POST["type"]){
@@ -60,6 +59,7 @@ if(isset($_POST["type"])){
 			}
 			break;
 		case "ho"://历史订单
+			echo '<script type="text/javascript" src="js/bootstrap.js"></script>';
 			echo '<div id="pc_top" class="pi_top">历史订单</div><hr class="hr-top"/>';
 			$order_sql = mysql_query("SELECT * FROM orders WHERE user_id = $uid");
 			echo '<div class="accordion" id="accordion2">';

@@ -14,7 +14,7 @@ function bind_event(){
 }
 if(box == 'yes'){
 	$("#checkbox_login").attr("checked","checked");
-	$("#phone").attr("value",username);
+	$("#login_phone").attr("value",username);
 }
 function SetCookie(name,value){//两个参数，一个是cookie的名子，一个是值
 	var Days = 300; //此 cookie 将被保存 30 天
@@ -54,7 +54,7 @@ function login(){
 				function(returnKey){
 					if(returnKey == 1){
 					login = 1;
-					$("#rightContent").html('<div id="iwannabe">购物车</div><div id="loginUI"><div class="blank-cart"></div></div>');
+					$("#rightContent").html('<div id="iwannabe">购物车</div><div d="loginUI"><p>汝的购物车空空如也</p><div class="click" id="logout"></div></div>');
 					}else if(returnKey == 2){
 						$("#rightContent").html('<div id="iwannabe">我要订餐</div><div id="loginUI"><form><p class="inputips">请确认你的<span>手机号</span>/telephone</p><input type="text" id="phone" placeholder="phone number" value="'+username+'"/><p class="inputips">您是第一次登陆,请设置一个密码:</p><input type="password" id="password"/><p class="inputips">确认密码:</p><input type="password" id="confirm_psw"/><div class="click" id="register"></div><div class="click" id="back_login"></div></form></div>');
 					}else{

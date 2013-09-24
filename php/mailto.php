@@ -29,7 +29,7 @@ if($num<=0){
 		$smtpuser = "noreply@ezsoon.cn";//SMTP服务器的用户帐号
 		$smtppass = "suibian2013.";//SMTP服务器的用户密码
 		$mailsubject = "[随便送--ezsoon.cn] 取回密码邮件 ";//邮件主题
-		$mailbody = '尊敬的'.$username.'手机号使用者：<br />&nbsp;&nbsp;&nbsp;&nbsp;取回密码邮件<br />请点击下面的链接，按流程进行密码重设。<a href="http://www.ezsoon.cn/php/resetpassword.php?token='.$string.'" mce_href="http://www.ezsoon.cn/php/resetpassword.php?token='.$string.'">http://www.ezsoon.cn/php/resetpassword.php?token='.$string.'</a><br>(如果上面不是链接形式，请将地址手工粘贴到浏览器地址栏再访问)
+		$mailbody = '尊敬的'.$username.'手机号使用者：<br />&nbsp;&nbsp;&nbsp;&nbsp;取回密码邮件<br />请点击下面的链接，按流程进行密码重设。<a href="http://localhost/ezsoon/php/resetpassword.php?token='.$string.'" mce_href="http://localhost/in-te/resetpassword.php?token='.$string.'">http://localhost/in-te/resetpassword.php?token='.$string.'</a><br>(如果上面不是链接形式，请将地址手工粘贴到浏览器地址栏再访问)
 		上面的页面打开后，输入新的密码后提交，之后您即可使用新的密码登录了。<br><br>此邮件为系统邮件，请勿直接回复';
 		//邮件内容
 		$mailtype = "HTML";//邮件格式（HTML/TXT）,TXT为文本邮件

@@ -7,6 +7,10 @@ window.onload = function(){
 		event.preventDefault();
 		index_register();
 	});
+	$("body").on("click","#submit_password",function(){
+		event.preventDefault();
+		find_password();
+	});
 }
 
 //首页登录
@@ -87,6 +91,33 @@ function index_register(){
 		}
 	}else{
 		alert('请输入必要信息');
+	}
+}
+function find_password(){
+	var new_password = $("#new_password").val();
+	var new_password_c = $("#new_password_c").val();
+	if(new_password != ""&&new_password_c != ""){
+		if(new_password == new_password_c){
+			$.ajax({
+				type: "POST",
+				url: "./personal_info.php", 
+				data:"&type=findPassword&newpassword="+new_password,
+				success: 
+				function(returnKey){
+					if(returnKey == 1){
+						alert("已修改密码");
+						$("#new_password,#new_password_c").val('');
+					}else{
+						alert(returnKey);
+					}
+				}	
+			});
+		}else{
+			alert("两次输入密码不一致，请重新输入！");
+			$("#newpassword,#confirm_password").val('');
+		}
+	}else{
+		alert("请填写全部信息！");
 	}
 }
 
