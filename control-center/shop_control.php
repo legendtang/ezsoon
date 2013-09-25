@@ -102,7 +102,7 @@ if(intval(Date("i"))>30){
 	</div>
 	<div  style="position:fixed;top:0px;left:800px;">
 		<h3>信息框:</h3>
-		<pre id="infoBox" style="display:block;overflow:auto;width:300px;height:400px;border:1px solid;padding:10px;"></pre>
+		<textarea id="infoBox" style="display:block;overflow:auto;width:300px;height:400px;border:1px solid;padding:10px;"></textarea>
 		<button id="cancel" class="btn btn-warning">撤销</button>
 		<button id="clear" class="btn btn-danger">清空</button>
 		<button id="copy" class="btn btn-success">复制</button>

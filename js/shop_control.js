@@ -30,7 +30,7 @@ function creatInfo(order){
 			cancelList.push(order);
 			infoBox.push(str);
 			orders[v][3] = 0;
-			$("#infoBox").html('<p>###'+infoBox.join("\n")+'</p>');
+			$("#infoBox").html('###'+infoBox.join("\n"));
 		}
 	}
 }
@@ -52,7 +52,7 @@ function ready(id){
 function cancel(){
 	infoBox.pop();
 	if(infoBox.length > 1){
-		$("#infoBox").html('<p>'+orders[0][5]+'\n'+infoBox.join("\n")+'</p>');
+		$("#infoBox").html(orders[0][5]+'\n'+infoBox.join("\n"));
 	}else{
 		$("#infoBox").html('');
 	}
@@ -96,7 +96,9 @@ function clear(){
 	cancelList.length = 0;
 }
 function copy(){
-
+	var e=document.getElementById("infoBox");//对象是contents 
+    e.select()(); //选择对象 
+    document.execCommand("Copy"); //执行浏览器复制命令 
 }
 function refresh(type){
 	$.ajax({

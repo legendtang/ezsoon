@@ -41,14 +41,14 @@ function creatInfo(order){
 			cancelList.push(order);
 			infoBox.push(str);
 			sendList[v][7] = 0;
-			$("#infoBox").html('<p>'+infoBox.join("\n")+'</p>');
+			$("#infoBox").html(infoBox.join("\n"));
 		}
 	}
 }
 function cancel(){
 	infoBox.pop();
 	if(infoBox.length){
-		$("#infoBox").html('<p>'+'\n'+infoBox.join("\n")+'</p>');
+		$("#infoBox").html('\n'+infoBox.join("\n"));
 	}else{
 		$("#infoBox").html('');
 	}
@@ -92,21 +92,9 @@ function clear(){
 	cancelList.length = 0;
 }
 function copy(){
- var text = document.getElementById("infoBox");
-    if ($.browser.msie) {
-        var range = document.body.createTextRange();
-        range.moveToElementText(text);
-        range.select();
-    } else if ($.browser.mozilla || $.browser.opera || $.browser.chrome) {
-        var selection = window.getSelection();
-        var range = document.createRange();
-        range.selectNodeContents(text);
-        selection.removeAllRanges();
-        selection.addRange(range);
-    } else if ($.browser.safari) {
-        var selection = window.getSelection();
-        selection.setBaseAndExtent(text, 0, text, 1);
-    }
+ var e=document.getElementById("infoBox");//对象是contents 
+    e.select()(); //选择对象 
+    document.execCommand("Copy"); //执行浏览器复制命令 
 }
 function ready(id,type){
 	$.ajax({
