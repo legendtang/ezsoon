@@ -5,6 +5,8 @@
 	$temp_order = mysql_query("SELECT * FROM temp_order ORDER BY ID DESC LIMIT 1");
 	if($last_order = mysql_fetch_array($temp_order)){
 		$last_id = $last_order["ID"];
+	}else{
+		$last_id = 0;
 	}
 ?>
 <!DOCTYPE html>
@@ -63,7 +65,7 @@
 	</style>
 </head>
 <body>
-	<div style="margin:0 5%;padding-bottom:200px;">
+	<div style="margin:0 5%;margin-bottom:200px;">
 	<h1>模拟用户下单(附中) 当前订单号:<?php echo ($last_id+1);?></h1>
 	<?php
 		echo '<ul class="nav nav-tabs">';
@@ -96,7 +98,7 @@
 		}
 		echo '</div>';
 	?>
-	
+	<div style="clear:both;"></div>
 	</div>
 	<div id="infoBox">
 		<div id="sendInfo">
