@@ -96,25 +96,25 @@ img{
 }
 
 #fader #preCircle{
-	top:145px;
-	left:0px;
-	z-index:998;
-	position:absolute;
-	display:block;
-	width:44px;
-	height:46px;
-	cursor:pointer;
-	background:url(../images/slide/circle_left_arrow.png) 0px 0px no-repeat;
+	top: 177px;
+	left: -1px;
+	z-index: 998;
+	position: absolute;
+	display: block;
+	width: 29px;
+	height: 56px;
+	cursor: pointer;
+	background: url(../images/slide/circle_left_arrow.png) 0px 0px no-repeat;
 }
 #fader #nextCircle{
-	top:145px;
-	right:0px;
-	z-index:998;
-	position:absolute;
-	display:block;
-	width:44px;
-	height:46px;
-	cursor:pointer;
+	top: 177px;
+	right: -1px;
+	z-index: 998;
+	position: absolute;
+	display: block;
+	width: 29px;
+	height: 56px;
+	cursor: pointer;
 	background:url(../images/slide/circle_right_arrow.png) 0px 0px no-repeat
 ;}
 ======================end of fader=============================

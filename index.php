@@ -36,6 +36,8 @@
 				$(".front-signin").fadeIn(800);
 			});
 		});
+	    if (checkMobile())
+			location.href = "mobile/"; // 移动端
 	</script>
 </head>
 <body>

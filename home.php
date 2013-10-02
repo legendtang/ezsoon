@@ -24,6 +24,10 @@ if(isset($_SESSION["uid"])){
 	<script type="text/javascript" src="js/home.js"></script>
 	<script type="text/javascript" src="js/base.js"></script>
 	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+	    if (checkMobile())
+			location.href = "mobile/";///移动端域名
+	</script>
 </head>
 <body>
 	<div id="navbar">

@@ -13,7 +13,6 @@
 　 	<link rel="stylesheet" href="./css/jquery_mobile.css" />
 　	<script src="./js/jquery.js"></script>
 	<script src="./js/jquery_mobile.js"></script>
-	
 </head> 
 <body>
 	<section id="page1" data-role="page">
@@ -36,6 +35,10 @@
 	  <footer data-role="footer" ><h1>©2012 ezsoon 随便送(www.ezsoon.cn)</h1></footer>
 	  <script type="text/javascript" src="./js/base.js"></script>
 	  <script type="text/javascript" src="./js/index.js"></script>
+      <script type="text/javascript">
+	    if (!checkMobile())
+			location.href = "../"; //PC端
+	  </script>
 	</section>
 </body>
 </html>
