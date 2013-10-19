@@ -58,9 +58,9 @@ if(!isset($_SESSION["uid"])){
 				<div data-role="fieldcontain">
 					<label for="zone" class="select">送餐地址:</label>
 					<select id="zone" data-native-menu="false">
-						<option value="1" <?php if($zone == 1)echo 'selected="selected"';?>>喻园学生公寓</option>
-						<option value="2" <?php if($zone == 2)echo 'selected="selected"';?>>华科大附中</option>
-						<option value="3" <?php if($zone == 3)echo 'selected="selected"';?>>SBI送餐区</option>
+						<option value="0" <?php if($zone == 0)echo 'selected="selected"';?>>喻园学生公寓</option>
+						<option value="1" <?php if($zone == 1)echo 'selected="selected"';?>>华科大附中</option>
+						<option value="2" <?php if($zone == 2)echo 'selected="selected"';?>>SBI送餐区</option>
 					</select>
 				</div>
 				<div data-role="fieldcontain">
@@ -69,14 +69,14 @@ if(!isset($_SESSION["uid"])){
 				</div>
 			</form>
 		</div>
-		<footer data-role="footer" >
+		<footer data-role="footer">
 			<div data-role="navbar">
 				<ul>
 					<li><a data-rel="back" data-icon="back" >返回继续订餐</a></li>
 					<li><a data-icon="check" id="update_info">确定</a></li>
 				</ul>
 			</div><!-- /navbar -->
-			<h1>©2012 ezsoon 随便送(www.ezsoon.cn)</h1>
+			<h1>©2013 ezsoon 随便送(www.ezsoon.cn)</h1>
 		</footer>
 		<script type="text/javascript" src="./js/personal_center.js"></script>
 	</section>

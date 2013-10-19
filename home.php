@@ -68,10 +68,11 @@ if(isset($_SESSION["uid"])){
 						$time = $row["time"];
 						$short_info = $row["short_info"];
 						$state = $row["state"];	
-					echo '<li class="click shop" onclick="window.location.href = \'./shop.php?id='.$id.'\';">';
+					echo '<li class="click shop" ';
+					echo $state?'onclick="window.location.href = \'./shop.php?id='.$id.'\';">':'>';
 					echo 	'<img class="shopImg" src="'.$logo.'"></img>';
 					echo	'<div class="shopInfo red"><div class="shopView"><div class="shopText"><div><b>'.$name.'</b></div><div><div style="float:left;width:auto">类别：</div><div style="color:#cf5a03;float:left;width:auto">'.$short_info.'</div></div></div></div>';
-					echo $state?"<div class=\"shopRun\"><div>营业中</div></div>":"<div class=\"shopPause\"><div>暂停营业</div></div>";
+					echo $state?"<div class=\"shopRun\"><div>营业中</div></div>":"<div class=\"shopPause\"><div>暂停</div></div>";
 					echo '</div></li>';
 				}
 				?>

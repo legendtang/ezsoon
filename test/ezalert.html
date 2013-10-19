@@ -3,7 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>test for EzAlert();</title>
-	<script type="text/javascript" src="http://beta.ezsoon.cn/js/jquery.js"></script>
+	<script type="text/javascript" src="../js/jquery.js"></script>
 	<script type="text/javascript">
 	function ezalert(content) {
 		$('body').append('<div id="ezalert_overlay"></div>' + 
@@ -11,7 +11,10 @@
 			'<div id="ezalert_content"></div>' + 
 			'</div>');
 		$('#ezalert_content').html(content);
-		setTimeout('$("#ezalert_overlay,#ezalert_container,#ezalert_content").remove()',2000);
+		$("body").on("click","#ezalert_overlay",function(){
+			$("#ezalert_overlay,#ezalert_container,#ezalert_content").remove();
+		});
+		setTimeout('$("#ezalert_overlay,#ezalert_container,#ezalert_content").remove()',5000);
 	};
 	</script>
 	<style type="text/css">

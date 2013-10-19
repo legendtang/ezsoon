@@ -42,11 +42,11 @@
 		 <footer data-role="footer" >
 			<div data-role="navbar">
 				<ul>
-					<li><a data-icon="info">帮助</a></li>
+					<li><a data-icon="info" href="./help.html">帮助</a></li>
 					<li><a data-icon="star" href="./cart.php">购物车</a></li>
 				</ul>
 			</div><!-- /navbar -->
-			<h1>©2012 ezsoon 随便送(www.ezsoon.cn)</h1>
+			<h1>©2013 ezsoon 随便送(www.ezsoon.cn)</h1>
 		</footer>
 	</section>
 </body>

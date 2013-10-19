@@ -31,7 +31,7 @@ if(!isset($_SESSION["uid"])){
 <body>
 	<section data-role="page">
 		<div data-role="header" data-position="inline">
-			<a  data-icon="gear" href="./personal_center.php">个人中心</a>
+			<a data-icon="gear" href="./personal_center.php">个人中心</a>
 			<h1>购物车</h1>
 			<a id="logout" data-icon="delete">注销</a>
 		</div>
@@ -44,6 +44,7 @@ if(!isset($_SESSION["uid"])){
 						$cart = $_SESSION["cart"];
 						echo '<script language="javascript">cart = eval('.json_encode($cart).');</script>';
 						$i = 0;
+						$total = 0;
 						foreach($cart as $v){
 							echo '<li><div class="ui-grid-d" id="list'.$i.'">';
 							echo '<div class="ui-block-a" style="line-height:30px;">'.$v[1].'</div>';
@@ -57,7 +58,7 @@ if(!isset($_SESSION["uid"])){
 						}
 						
 					}
-					echo '<li><div class="ui-grid-b"><div class="ui-block-a" style="line-height:30px;">合计:￥'.$total.'</div><div class="ui-block-b" style="line-height:30px;">运费:￥2</div><div class="ui-block-c" style="line-height:30px;color:red;">总计:￥'.($total+2).'</div></div></li>';
+					echo '<li><div class="ui-grid-b"><div class="ui-block-a" style="line-height:30px;">合计:￥'.$total.'</div><div class="ui-block-b" style="line-height:30px;color:red;">运费:￥0</div><div class="ui-block-c" style="line-height:30px;color:red;">总计:￥'.($total).'</div></div></li>';
 				?>
 				
 			</ul>
@@ -73,12 +74,15 @@ if(!isset($_SESSION["uid"])){
 				<label for="zone" class="select">送出时间:</label>
 				<select id="sendTime" data-native-menu="false">
 				<?php
-					if($zone == 2){
+					if($zone == 1){
 						if($timeSection < 24){
 							echo '<option value = "23">11:30</option>';
 						}
 						if($timeSection < 36){
 							echo '<option value = "35">17:30</option>';
+						}else{
+							echo '<option value = "23">第二天11:30</option>';
+							echo '<option value = "35">第二天17:30</option>';
 						}
 					}else{
 						for($i = ($timeSection-20);$i < count($timeArray);$i++){
@@ -87,6 +91,25 @@ if(!isset($_SESSION["uid"])){
 					}
 				?>
 				</select>
+			</div>
+			<div>
+				<p>联系电话:<strong><?php echo $phone;?></strong></p>
+				<p>送餐地址:<strong><?php 
+					switch($zone){
+						case 0:
+							$zone_name = "华科韵苑";
+							break;
+						case 1:
+							$zone_name = "华科大附中";
+							break;
+						case 2:
+							$zone_name = "光谷创业街写字楼";
+							break;
+					}
+					echo $zone_name."--".$address;
+				?></strong></p>
+				<a href="./personal_center.php" data-role="button" data-icon="arrow-r">修改</a>
+				<p>tip:修改送餐信息后刷新购物车以显示新信息</p>
 			</div>
 			
 		</div>
@@ -98,7 +121,7 @@ if(!isset($_SESSION["uid"])){
 					<li><a data-icon="check" id="submit">下单</a></li>
 				</ul>
 			</div><!-- /navbar -->
-			<h1>©2012 ezsoon 随便送(www.ezsoon.cn)</h1>
+			<h1>©2013 ezsoon 随便送(www.ezsoon.cn)</h1>
 		</footer>
 		<script type="text/javascript" src="./js/cart.js"></script>
 		<script type="text/javascript" src="./js/base.js"></script>

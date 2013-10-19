@@ -43,19 +43,23 @@ if(!isset($_SESSION["uid"])){
 						break;
 				}
 				if(mysql_query("INSERT INTO temp_order (orders,num,user_id,note,address,aim_zone,order_time,time_section,state) VALUES ('$order','$num','$uid','$note','$address','$zone','$orderTime','$sendTime','$state')")){
+					$order_sql = mysql_query("SELECT * FROM temp_order ORDER BY ID DESC LIMIT 1");
+					$o = mysql_fetch_array($order_sql);
+					//登录
+					$order_id = $o["ID"];
 					unset($_SESSION["cart"]);
-					$result = 1;//成功
+					$result = '{"status":1,"order_id":'.$order_id.'}';//成功
 				}else{
-					$result = 2;//错误
+					$result = '{"status":2,"order_id":-1}';//错误
 				} 
 			}else{
-				$result = 4;//无订单
+				$result = '{"status":4,"order_id":-1}';//无订单
 			}
 		}else{
-			$result = 5;//不在送出时间内
+			$result = '{"status":5,"order_id":-1}';//不在送出时间内
 		}
 	}else{	
-		$result = 3;//个人信息不全
+		$result = '{"status":3,"order_id":-1}';//个人信息不全
 	}
 }//end of isset uid
 echo $result;

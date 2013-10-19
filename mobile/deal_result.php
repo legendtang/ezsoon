@@ -18,7 +18,7 @@
 		<?php
 		switch($_GET["result"]){
 			case 1:
-				echo '<p>您的订单已经提交,将会在您设定的时间为您送出;</p>';
+				echo '<p>您的订单<strong>已经提交</strong>,订单号为:<strong> '.$_GET["order_id"].' </strong>.请牢记订单号,我们将会在您设定的时间为您送出;</p>';
 				break;
 			case 2:
 				echo '<p>订单提交错误,您可以尝试重新提交或者联系客服人员;</p>';
@@ -35,10 +35,12 @@
 			case 6:
 				echo '<p>未登录用户;</p>';
 				break;
+			default:
+				echo '<p>信息错误;!</p>';
 		}
 		?>
 		</div>
-	<div data-role="footer"><h4>2012 ezsoon.cn 随便送</h4></div>
+	<div data-role="footer"><h4>2013 ezsoon.cn 随便送</h4></div>
 	</section>
 </body>
 </html>

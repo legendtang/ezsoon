@@ -56,7 +56,7 @@ if($_GET["id"]){
 			<div data-role="collapsible-set">
 			<?php
 				$nav_num = count($shop_type)>5?10:5;
-				echo $nac_num;
+				//echo $nav_num;
 				for($i = 0;$i<$nav_num;$i++){
 					$title = 0;
 					foreach($menu as $v){
@@ -83,10 +83,12 @@ if($_GET["id"]){
 					<li><a data-icon="star" href="./cart.php">购物车</a></li>
 				</ul>
 			</div><!-- /navbar -->
-			<h1>©2012 ezsoon 随便送(www.ezsoon.cn)</h1>
+			<h1>©2013 ezsoon 随便送(www.ezsoon.cn)</h1>
 			
 		</footer>
-		<script language="javascript">$("body").on('click',".available",function(){order($(this).attr("name"))});</script>
-	</section>
+		<script language="javascript">
+		$("body").off('click',".available")
+		$("body").on('click',".available",function(){order($(this).attr("name"))});</script>
+		</section>
 </body>
 </html>

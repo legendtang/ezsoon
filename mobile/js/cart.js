@@ -44,7 +44,8 @@ function submit(){
 		data:"&time="+sendTime,
 		success:
 		function(returnKey){
-			window.location.href = "./deal_result.php?result="+returnKey;
+			eval('var data = '+returnKey);
+			window.location.href = "./deal_result.php?result="+data["status"]+"&order_id="+data["order_id"];
 		}
 	});
 }

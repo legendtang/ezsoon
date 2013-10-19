@@ -28,11 +28,17 @@
 						</fieldset>
 				<div class="ui-grid-a">
 					<div class="ui-block-a"><a data-role="button" id="index_login" data-theme="b">登录</a></div>
-					<div class="ui-block-b"><a href="./register.php" data-role="button" id="index_register" data-theme="e">注册</a></div>
+					<div class="ui-block-b"><a href="./register.php" data-role="button" data-theme="e">注册</a></div>
 				</div>
 			</form>
 	  </div>
-	  <footer data-role="footer" ><h1>©2012 ezsoon 随便送(www.ezsoon.cn)</h1></footer>
+	  <footer data-role="footer" ><div data-role="navbar">
+				<ul>
+					<li><a data-icon="info" href="./help.html">帮助</a></li>
+				</ul>
+			</div><!-- /navbar -->
+			<h1>©2013 ezsoon 随便送(www.ezsoon.cn)</h1>
+		</footer>
 	  <script type="text/javascript" src="./js/base.js"></script>
 	  <script type="text/javascript" src="./js/index.js"></script>
       <script type="text/javascript">

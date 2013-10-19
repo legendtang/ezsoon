@@ -17,7 +17,7 @@
 </head> 
 <body>
 	<section data-role="page">
-	   <header data-role="header"  data-theme="b" ><h1>注册随便送</h1></header>
+	   <header data-role="header"  data-theme="b" ><a data-rel="back" data-icon="back" >返回</a><h1>注册随便送</h1></header>
 		<div data-role="content" class="content">
 			<form action="" method="post">
 				<label for="email">手机号</label>
@@ -33,7 +33,15 @@
 				</center>
 			</form>
 		</div>
-		<footer data-role="footer" ><h1>©2012 ezsoon 随便送(www.ezsoon.cn)</h1></footer>
+		<footer data-role="footer" >
+			<div data-role="navbar">
+				<ul>
+					<li><a data-icon="info" href="./help.html">帮助</a></li>
+				</ul>
+			</div><!-- /navbar -->
+			<h1>©2013 ezsoon 随便送(www.ezsoon.cn)</h1>
+			
+		</footer>
 		<script type="text/javascript" src="./js/register.js"></script>
 	</section>
 </body>

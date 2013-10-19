@@ -1,9 +1,7 @@
-window.onload = function(){
-	$("#index_register").bind('click',function(event){
-		event.preventDefault();
-		index_register();
-	});
-}
+$("body").on('click',"#index_register",function(event){
+	event.preventDefault();
+	index_register();
+});
 function index_register(){
 	var username = $("#reg_phone").val().replace(/\s/g, '');
 	var mail = $("#reg_mail").val().replace(/\s/g, '');
@@ -28,7 +26,7 @@ function index_register(){
 							if(returnKey == 1){
 								window.location.href = "./home.php";
 							}else if(returnKey == 2){
-								alert("您的手机号已经在本站注册过了~")
+								alert("您的手机号已经在本站注册过了~(提示:如果您之前使用过手机或短信点餐,那么系统已自动为您注册账号,初始密码为123456,请尝试登陆并尽快修改个人信息)")
 								$("#reg_phone,#reg_mail,#reg_password,#reg_password_c").val('');
 							}else{
 								alert(returnKey);

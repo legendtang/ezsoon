@@ -159,20 +159,24 @@
 							zone = 2;
 							break;
 					}
-					$.ajax({
-						type: "POST",
-						url: "./php/imitate_deal.php", 
-						data:"&time="+sendTime+"&address="+sendAdd+"&zone="+zone+"&phone="+phone,
-						success: 
-						function(returnKey){
-							if(returnKey == 1){
-								alert("已下单");
-								window.location.href = "./wtf.php"; 
-							}else{
-								alert(returnKey);
+					if(sendTime&&phone){
+						$.ajax({
+							type: "POST",
+							url: "./php/imitate_deal.php", 
+							data:"&time="+sendTime+"&address="+sendAdd+"&zone="+zone+"&phone="+phone,
+							success: 
+							function(returnKey){
+								if(returnKey == 1){
+									alert("已下单");
+									window.location.href = "./wtf.php"; 
+								}else{
+									alert(returnKey);
+								}
 							}
-						}
-					});
+						});
+					}else{
+						alert("信息不全");
+					}
 				}else{
 					alert("无订单");
 				}
