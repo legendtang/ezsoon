@@ -76,7 +76,7 @@ if($_GET["id"]){
 			?>
 			</div>
 		</div>
-		<footer data-role="footer" >
+		<footer data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a data-icon="back" href="./home.php" >返回店铺选择</a></li>

@@ -33,7 +33,7 @@
 				</center>
 			</form>
 		</div>
-		<footer data-role="footer" >
+		<footer data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a data-icon="info" href="./help.html">帮助</a></li>

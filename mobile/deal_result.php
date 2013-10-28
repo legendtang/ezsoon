@@ -40,7 +40,7 @@
 		}
 		?>
 		</div>
-	<div data-role="footer"><h4>2013 ezsoon.cn 随便送</h4></div>
+	<div data-role="footer" data-position="fixed"><h4>2013 ezsoon.cn 随便送</h4></div>
 	</section>
 </body>
 </html>

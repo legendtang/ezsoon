@@ -32,7 +32,7 @@
 				</div>
 			</form>
 	  </div>
-	  <footer data-role="footer" ><div data-role="navbar">
+	  <footer data-role="footer" data-position="fixed"><div data-role="navbar">
 				<ul>
 					<li><a data-icon="info" href="./help.html">帮助</a></li>
 				</ul>
@@ -42,8 +42,8 @@
 	  <script type="text/javascript" src="./js/base.js"></script>
 	  <script type="text/javascript" src="./js/index.js"></script>
       <script type="text/javascript">
-	    if (!checkMobile())
-			location.href = "../"; //PC端
+	    /* if (!checkMobile())
+			location.href = "../"; //PC端 */
 	  </script>
 	</section>
 </body>

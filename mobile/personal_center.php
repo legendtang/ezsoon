@@ -69,7 +69,7 @@ if(!isset($_SESSION["uid"])){
 				</div>
 			</form>
 		</div>
-		<footer data-role="footer">
+		<footer data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a data-rel="back" data-icon="back" >返回继续订餐</a></li>

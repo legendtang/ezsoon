@@ -113,7 +113,7 @@ if(!isset($_SESSION["uid"])){
 			</div>
 			
 		</div>
-		<footer data-role="footer" >
+		<footer data-role="footer" data-position="fixed">
 			<div data-role="navbar">
 				<ul>
 					<li><a data-icon="back" href="./home.php" >继续订餐</a></li>
