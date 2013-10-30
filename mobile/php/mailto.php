@@ -1,7 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>找回密码申请</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1" /> 
+<link rel="stylesheet" href="../css/jquery_mobile.css" />
+<script src="../js/jquery.js"></script>
+<script src="../js/jquery_mobile.js"></script>
+</head>
+<body>
+	<section dtat-role="page">
+		<div data-role="header">
+			<a data-rel="back" data-icon="back" >返回</a>
+			<h2>找回密码申请</h2>
+		</div>
+		<div data-role="content" data-position="inline">
+			<p>
 <?php
 require_once ('./linkDB.php');
 require_once ('./email.class.php');
-
+if(!isset($_POST['username'])||!isset($_POST['mail'])){
+	echo '信息不全!';
+	exit;
+}
 $username = trim($_POST['username']);
 $check_mail = trim($_POST['mail']);
 
@@ -36,7 +57,21 @@ if($num<=0){
 		$smtp = new smtp($smtpserver,$smtpserverport,true,$smtpuser,$smtppass);//这里面的一个true是表示使用身份验证,否则不使用身份验证.
 		$smtp->debug = false;//是否显示发送的调试信息
 		$smtp->sendmail($smtpemailto, $smtpusermail, $mailsubject, $mailbody, $mailtype);
-		echo "邮件已发送,赶快去邮箱查收";
+		echo "邮件已发送,赶快去".$user_email."邮箱查收";
 	}
 }
 ?>
+			</p>
+		</div>
+		<footer data-role="footer" data-position="fixed">
+			<div data-role="navbar">
+				<ul>
+					<li><a data-icon="info" href="./help.html">帮助</a></li>
+				</ul>
+			</div><!-- /navbar -->
+			<h1>©2013 ezsoon 随便送(www.ezsoon.cn)</h1>
+			
+		</footer>
+	</section>
+</body>
+</html>

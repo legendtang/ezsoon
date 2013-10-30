@@ -9,8 +9,7 @@
 		//$(function() {
 		//	$('.noTextClear').textClear();
 		//});
-		$(document).ready(function() { 
-			//把下面这段代码加到index.js里的$(document).ready里面就行了,如果要改那几个表单的id这里也要改
+		$(document).ready(function(){
 			$("body").on("click","#find_password_submit",function(){
 				var username = $("#find_password_username").val();
 				var checkmail = $("#find_password_checkmail").val();
