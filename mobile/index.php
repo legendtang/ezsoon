@@ -31,7 +31,8 @@
 					<div class="ui-block-b"><a href="./register.php" data-role="button" data-theme="e">注册</a></div>
 				</div>
 				<div class="ui-grid-a">
-					<div class="ui-block-a"><a data-role="button"  data-theme="b" href="./register.php">忘记密码</a></div>
+					<div class="ui-block-a"></div>
+					<div class="ui-block-b"><a data-role="button"  data-theme="e" href="./forgetpassword.php">忘记密码</a></div>
 				</div>
 			</form>
 	  </div>

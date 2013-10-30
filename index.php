@@ -68,7 +68,7 @@
 			<form action="#" class="signin" method="post">
 				<input type="tel" id="login_phone" class="noTextClear" placeholder="手机号码" pattern="^((13[0-9])|(15[0-9])|(18[0-9])|(14[0-9]))+\d{8}$" required name/>
 				<input id="login_password" type="password" class="noTextClear" placeholder="密码" required name/>
-				<p class="abs grey" onclick="javascript: window.location = ('./temp.php')">忘记密码?</p>
+				<p class="abs grey" onclick="javascript: window.location = ('./forgetpassword.php')">忘记密码?</p>
 				<div style="margin-top:20px;">
 					<button type="submit" id="index_login" class="in-bl btn btn-signin"></button>
 					<label>
