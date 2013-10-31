@@ -1,6 +1,11 @@
 ezsoon
 ======
 
-Prototype of a meal&drink delivery website.
+Prototype of a meal & drink delivery website.
 
-develop control-center for hustfz
+changelog:
+blablabla
+
+need to resolve:
+add area-choosing function
+make forgot password function actually work.
