@@ -112,7 +112,7 @@ if(isset($_SESSION["uid"])){
 			<div id="leftfooter">
 				<p class="flashlight"><span>关注EZ：</span>即将上线</p>
 			</div>
-			<div id="rightfooter"><!--div><a href="#">加入我们</a></div><div class="divider2"></div><div><a href="agreement.html">服务协议</a></div--></div>
+			<div id="rightfooter"><!--div><a href="#">加入我们</a></div><div class="divider2"></div--><div><a href="policies.html">服务协议</a></div></div>
 			<div id="copyright"><p>Copyright © 2013 Ezsoon.All Rights Reserved. 版权所有 鄂ICP备13007093号</p></div>
 		</div>
 		<div id="clear"></div>
