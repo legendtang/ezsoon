@@ -563,6 +563,94 @@ hr.hr-content{
 	height:1px;
 	overflow:hidden;
 }
+/*=============area choosing===============*/
+#area_chosen{
+	position:fixed;
+	margin:auto;
+    left:0; right:0; top:0; bottom:0;
+	width: 601px;
+	height: 368px;
+	z-index: 99999;
+}
+#ac_nav{
+	width: 106px;
+	height: 368px;
+	float: left;
+	border: none;
+	border-bottom-left-radius: 5px;
+	border-top-left-radius: 5px;
+	background: #e5e5e5;
+}
+.ac_img{
+	background: url(../images/iconac.png) no-repeat -266px -51px;
+	width: 37px;
+	height: 223px;
+	position: absolute;
+	top: 50px;
+	left: 36px;
+}
+#nav_frame{
+	width: 495px;
+	height: 368px;
+	float: left;
+	border: none;
+	border-bottom-right-radius: 5px;
+	border-top-right-radius: 5px;
+    background:rgba(255, 255, 255, 0.7);
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#4c000000', EndColorStr='#4c000000');
+}
+:root #nav_frame{
+    filter:progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr='#00000000', EndColorStr='#00000000');
+}
+.ac_close{
+	width: 23px;
+	height: 23px;
+	background: url(../images/iconac.png) no-repeat -273px -318px;
+	position: absolute;
+	right: 15px;
+	top: 15px;
+	cursor: pointer;
+}
+.ac_close:hover{
+	background: url(../images/iconac.png) no-repeat -273px -292px;
+}
+.area_1{
+	width: 225px;
+	height: 52px;
+	background: url(../images/iconac.png) no-repeat -16px -40px;
+	position: absolute;
+	top: 72px;
+	left: 132px;
+	cursor: pointer;
+}
+.area_1:hover{
+	background: url(../images/iconac.png) no-repeat -16px -100px;
+}
+.area_2{
+	width: 225px;
+	height: 52px;
+	background: url(../images/iconac.png) no-repeat -16px -162px;
+	position: absolute;
+	top: 153px;
+	left: 203px;
+	cursor: pointer;
+}
+.area_2:hover{
+	background: url(../images/iconac.png) no-repeat -16px -224px;
+}
+.area_3{
+	width: 225px;
+	height: 52px;
+	background: url(../images/iconac.png) no-repeat -16px -286px;
+	position: absolute;
+	top: 229px;
+	left: 272px;
+	cursor: pointer;
+}
+.area_3:hover{
+	background: url(../images/iconac.png) no-repeat -16px -346px;
+}
+
 /*=============shopping cart===============*/
 #cart{
 	margin:0;

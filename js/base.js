@@ -5,6 +5,7 @@ function bind_event(){
 	$("body").on("click",".showPC",function(){showPersonalCenter();});
 	$("body").on('click',"#logout",function(){logout();});
 	$(".hidePC").bind("click",function(){hidePersonalCenter();});
+	$(".ac_close").bind("click",function(){hideAreaChoosing();});
 	$("#pi").bind("click",function(){switchPannel('personal_info')});
 	$("#ho").bind("click",function(){switchPannel('history_order')});
 	$("#co").bind("click",function(){switchPannel('current_order')});
@@ -215,8 +216,11 @@ function showPersonalCenter(){
 		alert("请先登录");
 	}
 }
-function hidePersonalCenter(){
-	$("#personal_center,#personal_center_bg").css("display","none");
+function showAreaChoosing(){
+	$("#area_chosen,#personal_center_bg").css("display","block");
+}
+function hideAreaChoosing(){
+	$("#area_chosen,#personal_center_bg").css("display","none");
 }
 function pi(){
 	$("#personal_info").css("display","block");

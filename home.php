@@ -117,6 +117,17 @@ if(isset($_SESSION["uid"])){
 		</div>
 		<div id="clear"></div>
 	</div>
+	<div id="area_chosen">
+		<div id="ac_nav">
+			<div class="ac_img"></div>
+		</div>
+		<div id="nav_frame">
+			<div class="ac_close"></div>
+			<div class="area_1"></div>
+			<div class="area_2"></div>
+			<div class="area_3"></div>			
+		</div>
+	</div>
 	<div id="personal_center_bg" class="hidePC"></div>
 	<div id="personal_center">
 		<div id="pc_nav">
