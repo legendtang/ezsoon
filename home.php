@@ -4,6 +4,9 @@ session_start();
 
 if(isset($_SESSION["uid"])){
 	$uid = $_SESSION["uid"];
+	$sql = mysql_query("SELECT * FROM user WHERE id='$uid' LIMIT 1");
+	$user = mysql_fetch_array($sql);
+	$zone = $user["zone"];
 	$login = 1;
 }else{
 	$login = 0;
@@ -64,16 +67,21 @@ if(isset($_SESSION["uid"])){
 					while($row = mysql_fetch_array($sql)){
 						$id = $row["ID"];
 						$name = $row["name"];
+						$to_zone = explode(";",$row["to_zone"]);
 						$logo = $row["big_img"];
 						$time = $row["time"];
 						$short_info = $row["short_info"];
 						$state = $row["state"];	
-					echo '<li class="click shop" ';
-					echo $state?'onclick="window.location.href = \'./shop.php?id='.$id.'\';">':'>';
-					echo 	'<img class="shopImg" src="'.$logo.'"></img>';
-					echo	'<div class="shopInfo red"><div class="shopView"><div class="shopText"><div><b>'.$name.'</b></div><div><div style="float:left;width:auto">类别：</div><div style="color:#cf5a03;float:left;width:auto">'.$short_info.'</div></div></div></div>';
-					echo $state?"<div class=\"shopRun\"><div>营业中</div></div>":"<div class=\"shopPause\"><div>暂停</div></div>";
-					echo '</div></li>';
+						for($i = 0;$i<count($to_zone);$i++){
+							if($to_zone[$i] == $zone){
+								echo '<li class="click shop" ';
+								echo $state?'onclick="window.location.href = \'./shop.php?id='.$id.'\';">':'>';
+								echo 	'<img class="shopImg" src="'.$logo.'"></img>';
+								echo	'<div class="shopInfo red"><div class="shopView"><div class="shopText"><div><b>'.$name.'</b></div><div><div style="float:left;width:auto">类别：</div><div style="color:#cf5a03;float:left;width:auto">'.$short_info.'</div></div></div></div>';
+								echo $state?"<div class=\"shopRun\"><div>营业中</div></div>":"<div class=\"shopPause\"><div>暂停</div></div>";
+								echo '</div></li>';
+							}
+						}
 				}
 				?>
 				</ul>
@@ -117,7 +125,9 @@ if(isset($_SESSION["uid"])){
 		</div>
 		<div id="clear"></div>
 	</div>
-	<div id="area_chosen">
+	<?php
+		if(!$login){
+echo '<div id="area_chosen">
 		<div id="ac_nav">
 			<div class="ac_img"></div>
 		</div>
@@ -127,7 +137,9 @@ if(isset($_SESSION["uid"])){
 			<div class="area_2"></div>
 			<div class="area_3"></div>			
 		</div>
-	</div>
+	</div>';
+	}
+	?>
 	<div id="personal_center_bg" class="hidePC"></div>
 	<div id="personal_center">
 		<div id="pc_nav">

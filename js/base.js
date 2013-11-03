@@ -216,6 +216,9 @@ function showPersonalCenter(){
 		alert("请先登录");
 	}
 }
+function hidePersonalCenter(){
+	$("#personal_center,#personal_center_bg").css("display","none");
+}
 function showAreaChoosing(){
 	$("#area_chosen,#personal_center_bg").css("display","block");
 }
@@ -273,13 +276,15 @@ function cp(){
 function change_info(){
 	var mail = $("#pc_email").val();
 	var name = $("#pc_name").val();
+	var zone = $("#pc_zone").val();
+	var address = $("#pc_address").val();
 	var phone = $("#pc_phone").val();
 	var gender = $("#pc_gender").val();
 	if(mail != ""&&phone != ""){
 		$.ajax({
 			type: "POST",
 			url: "./php/personal_info.php", 
-			data:"&type=changeInfo&mail="+mail+"&name="+name+"&gender="+gender+"&phone="+phone,
+			data:"&type=changeInfo&mail="+mail+"&name="+name+"&gender="+gender+"&phone="+phone+"&zone="+zone+"&address="+address,
 			success: 
 			function(returnKey){
 				if(returnKey == 1){

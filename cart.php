@@ -153,7 +153,7 @@ if(isset($_SESSION["uid"])){
 		</div>
 		<div id="clear"></div>
 	</div>
-	<div id="area_chosen">
+	<!--<div id="area_chosen">
 		<div id="ac_nav">
 			<div class="ac_img"></div>
 		</div>
@@ -163,7 +163,7 @@ if(isset($_SESSION["uid"])){
 			<div class="area_2"></div>
 			<div class="area_3"></div>			
 		</div>
-	</div>
+	</div>-->
 	<div id="personal_center_bg" class="hidePC"></div>
 	<div id="view_order_bg"></div>
 	<div id="personal_center">

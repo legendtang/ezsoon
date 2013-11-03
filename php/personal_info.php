@@ -8,6 +8,8 @@ if(isset($_SESSION["uid"])){
 	$user = mysql_fetch_array($sql);
 	$mail = $user["mail"];
 	$password = $user["password"];
+	$zone = $user["zone"];
+	$address = $user["address"];
 	$phone = $user["phone"];
 	$name = $user["name"];
 	$gender = $user["gender"];
@@ -23,6 +25,14 @@ if(isset($_POST["type"])){
 			}else if($gender == 2){
 				echo 	'<div class="pc_item"><label class="pi_name" for="pc_gender">性别:</label><select id="pc_gender"><option value = "1" selected="selected">男</option><option value = "2" selected="select">女</option></select></div>';
 			}
+			echo 	'<div class="pc_item"><label class="pi_name" for="pc_zone">送餐区:</label><select id="pc_zone"><option value = "0"';
+			if($zone == 0){echo 'selected="select"';}
+			echo '>韵苑学生公寓</option><option value = "1" ';
+			if($zone == 1){echo 'selected="select"';}
+			echo '>华科附中</option><option value = "2" ';
+			if($zone == 2){echo 'selected="select"';};
+			echo '>光谷SBI</option></select></div>';
+			echo	'<div class="pc_item"><label class="pi_name" for="pc_address">送餐地址:</label><input type="text" id="pc_address" value="'.$address.'"></input></div>';
 			echo	'<div class="pc_item"><label class="pi_name" for="pc_email">邮箱:</label><input type="text" id="pc_email" value="'.$mail.'"></input></div>';
 			echo 	'<div class="pc_item"><label class="pi_name" for="pc_phone">联系电话:</label><input type="text" id="pc_phone" value="'.$phone.'"></input></div>';
 			echo	'<div class="pc_item"><input type="button" id="change_info_submit" value="确认修改" /></div>';
@@ -102,12 +112,14 @@ if(isset($_POST["type"])){
 			echo	'<input type="button" id="change_password_submit" value="确认更改"/>';
 			break;
 		case "changeInfo"://更新个人信息
-			if(isset($_POST["mail"])&&isset($_POST["gender"])&&isset($_POST["name"])&&isset($_POST["phone"])){
+			if(isset($_POST["mail"])&&isset($_POST["gender"])&&isset($_POST["name"])&&isset($_POST["phone"])&&isset($_POST["zone"])&&isset($_POST["address"])){
 				$mail = $_POST["mail"];
 				$gender = $_POST["gender"];
 				$name = $_POST["name"];
 				$phone = $_POST["phone"];
-				if(mysql_query("UPDATE user SET mail = '$mail',gender = '$gender',name = '$name',phone = '$phone' WHERE ID = $uid")){
+				$zone = $_POST["zone"];
+				$address = $_POST["address"];
+				if(mysql_query("UPDATE user SET mail = '$mail',gender = '$gender',name = '$name',phone = '$phone',zone = '$zone',address = '$address' WHERE ID = $uid")){
 					echo 1;
 				}else{
 					echo 2;

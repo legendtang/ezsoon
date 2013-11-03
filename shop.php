@@ -158,6 +158,7 @@ if($_GET["id"]){
 		</div>
 		<div id="clear"></div>
 	</div>
+	<!--
 	<div id="area_chosen">
 		<div id="ac_nav">
 			<div class="ac_img"></div>
@@ -169,6 +170,7 @@ if($_GET["id"]){
 			<div class="area_3"></div>			
 		</div>
 	</div>
+	-->
 	<div id="personal_center_bg" class="hidePC"></div>
 	<div id="personal_center">
 		<div id="pc_nav">
