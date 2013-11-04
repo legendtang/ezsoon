@@ -8,8 +8,28 @@ if(isset($_SESSION["uid"])){
 	$user = mysql_fetch_array($sql);
 	$zone = $user["zone"];
 	$login = 1;
+	$zone_selected = 1;
 }else{
+	if(isset($_GET['zone'])){
+		$zone = $_GET['zone'];
+		$zone_selected = 1;
+	}else{
+		$zone = 0;
+		$zone_selected = 0;
+	}
+	
 	$login = 0;
+}
+switch($zone){
+	case 0:
+		$zone_name = '韵苑学生公寓送餐区';
+		break;
+	case 1:
+		$zone_name = '华科附中送餐区';
+		break;
+	case 2:
+		$zone_name = '光谷SBI送餐区';
+		break;
 }
 
 ?>
@@ -87,6 +107,7 @@ if(isset($_SESSION["uid"])){
 				</ul>
 			</div>
 			<div id="rightContent">
+				<div class="click switch_area"><?php echo $zone_name;?>(点击切换送餐区域)</div>
 				<?php 
 					if($login){
 						echo '<script language="javascript">login = 1;</script>';
@@ -125,10 +146,9 @@ if(isset($_SESSION["uid"])){
 		</div>
 		<div id="clear"></div>
 	</div>
-	<?php
-		if(!$login){
-echo '<div id="area_chosen">
-		<div id="ac_nav">
+	
+	<div id="area_chosen"<?php if($zone_selected){echo 'style="display:none;"';}?>>
+	<div id="ac_nav">
 			<div class="ac_img"></div>
 		</div>
 		<div id="nav_frame">
@@ -137,9 +157,7 @@ echo '<div id="area_chosen">
 			<div class="area_2"></div>
 			<div class="area_3"></div>			
 		</div>
-	</div>';
-	}
-	?>
+	</div>
 	<div id="personal_center_bg" class="hidePC"></div>
 	<div id="personal_center">
 		<div id="pc_nav">

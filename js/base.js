@@ -3,6 +3,7 @@ var username = getCookie("phone_login");
 function bind_event(){
 	$("body").on("click",".home",function(){home();});
 	$("body").on("click",".showPC",function(){showPersonalCenter();});
+	$("body").on("click",".switch_area",function(){showAreaChoosing();});
 	$("body").on('click',"#logout",function(){logout();});
 	$(".hidePC").bind("click",function(){hidePersonalCenter();});
 	$(".ac_close").bind("click",function(){hideAreaChoosing();});
@@ -12,6 +13,9 @@ function bind_event(){
 	$("#cp").bind("click",function(){switchPannel('change_password')});
 	$("#personal_center").on("click","#change_info_submit",function(){change_info()});
 	$("#personal_center").on("click","#change_password_submit",function(){change_password()});
+	$("#nav_frame").on("click",".area_1",function(){change_zone(1)});
+	$("#nav_frame").on("click",".area_2",function(){change_zone(2)});
+	$("#nav_frame").on("click",".area_3",function(){change_zone(0)});//韵苑用来代替光谷软件园
 }
 if(box == 'yes'){
 	$("#checkbox_login").attr("checked","checked");
@@ -297,6 +301,37 @@ function change_info(){
 	}else{
 		alert("请填写必要信息");
 	}
+}
+function change_zone(zone){
+	$.ajax({
+		type: "POST",
+		url: "./php/personal_info.php", 
+		data:"&type=changeZone&zone="+zone,
+		success: 
+		function(returnKey){
+			switch(zone){
+				case 0:
+					zone_name = '华科韵苑学生公寓';
+					break;
+				case 1:
+					zone_name = '华科附中';
+					break;
+				case 2:
+					zone_name = '光谷SBI';
+					break;
+			}
+			if(returnKey == 1){
+				var zone_name;
+				
+				alert('已切换到'+zone_name+'送餐区域');
+			}else if(returnKey == '未登录!'){
+				alert('已切换到'+zone_name+'送餐区域');
+			}else{
+				alert(returnKey);
+			}
+			window.location.href = "./home.php?zone="+zone;
+		}	
+	});
 }
 function change_password(){
 	var password = $("#pc_password").val();

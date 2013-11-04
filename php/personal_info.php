@@ -143,6 +143,16 @@ if(isset($_POST["type"])){
 				}
 			}
 			break;
+		case "changeZone":
+			if(isset($_POST["zone"])){
+				$zone = $_POST["zone"];
+				if(mysql_query("UPDATE user SET zone = '$zone' WHERE ID = $uid")){
+					echo 1;
+				}else{	
+					echo 2;
+				}
+			}
+			break;
 	}
 }
 //检查是否登录
