@@ -27,7 +27,7 @@ if(isset($_POST["type"])){
 			}
 			echo 	'<div class="pc_item"><label class="pi_name" for="pc_zone">送餐区:</label><select id="pc_zone"><option value = "0"';
 			if($zone == 0){echo 'selected="select"';}
-			echo '>韵苑学生公寓</option><option value = "1" ';
+			echo '>光谷软件园</option><option value = "1" ';
 			if($zone == 1){echo 'selected="select"';}
 			echo '>华科附中</option><option value = "2" ';
 			if($zone == 2){echo 'selected="select"';};

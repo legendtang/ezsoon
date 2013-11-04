@@ -15,7 +15,7 @@ function bind_event(){
 	$("#personal_center").on("click","#change_password_submit",function(){change_password()});
 	$("#nav_frame").on("click",".area_1",function(){change_zone(1)});
 	$("#nav_frame").on("click",".area_2",function(){change_zone(2)});
-	$("#nav_frame").on("click",".area_3",function(){change_zone(0)});//韵苑用来代替光谷软件园
+	$("#nav_frame").on("click",".area_3",function(){change_zone(0)});
 }
 if(box == 'yes'){
 	$("#checkbox_login").attr("checked","checked");
@@ -311,7 +311,7 @@ function change_zone(zone){
 		function(returnKey){
 			switch(zone){
 				case 0:
-					zone_name = '华科韵苑学生公寓';
+					zone_name = '光谷软件园';
 					break;
 				case 1:
 					zone_name = '华科附中';

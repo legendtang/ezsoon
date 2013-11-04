@@ -54,7 +54,7 @@ if($_GET["id"]){
 <body>
 	<div id="navbar">
 		<div class="welcome left">欢迎您来到 <b>随便送！</b> 服务热线：027-87345370 13871390741</div>
-		<div class="range right">目前配送范围：华科附中，华科韵苑，SBI创业街</div>
+		<div class="range right">目前配送范围：华科附中，光谷软件园，SBI创业街</div>
 	</div>
 	<div id="background"></div>
 	<div id="background-bottom"></div>

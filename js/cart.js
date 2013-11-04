@@ -1,6 +1,6 @@
 var cart = new Array();//0:id 1:name 2:num 3:price
 $(document).ready(function(){
-	select_add();
+	//select_add();
 	change_sendTime();
 	bind_event();
 	$("#orderView").on('click',".del",function(){delOrderL($(this).attr("name"))});
@@ -122,7 +122,7 @@ function submit(){
 		sendAdd = $("#zone").val()+$("#add").val()+$("#address").val();
 	//}
 	switch($("#zone").val()){
-		case "华科韵苑":
+		case "光谷软件园":
 			zone = 0;
 			break;
 		case "华科附中":

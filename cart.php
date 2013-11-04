@@ -3,9 +3,22 @@ require_once "./php/linkDB.php";
 session_start();
 
 if(isset($_SESSION["uid"])){
+	$login = 1;
 	$uid = $_SESSION["uid"];
 	$sql = mysql_query("SELECT * FROM user WHERE id='$uid' LIMIT 1");
 	$user = mysql_fetch_array($sql);
+	$zone = $user["zone"];
+	switch($zone){
+		case 0:
+			$zone_name = '光谷软件园';
+			break;
+		case 1:
+			$zone_name = '华科附中送餐区';
+			break;
+		case 2:
+			$zone_name = '光谷SBI送餐区';
+		break;
+	}
 	$address = $user["address"];
 	$phone = $user["phone"];
 	$name = isset($user["name"])?$user["name"]:'匿名';
@@ -30,7 +43,7 @@ if(isset($_SESSION["uid"])){
 <body>
 	<div id="navbar">
 		<div class="welcome left">欢迎您来到 <b>随便送！</b> 服务热线：027-87345370 13871390741</div>
-		<div class="range right">目前配送范围：华科附中，华科韵苑，SBI创业街</div>
+		<div class="range right">目前配送范围：华科附中，光谷软件园，SBI创业街</div>
 	</div>
 	<div id="background"></div>
 	<div id="background-bottom"></div>
@@ -112,14 +125,9 @@ if(isset($_SESSION["uid"])){
 					} */
 				?> 
 				<div class="addressInfo">
-					<select id="zone">
-						<option>华科韵苑</option>
-						<option>华科附中</option>
-						<option>光谷创业街</option>
+					<input type="text" id="zone" value="<?php echo $zone_name;?>" disabled="disabled"/>
 					</select>
-					<select id="add">
-					</select>
-					<input type="text" id="address" placeholder="送餐地址" x-webkit-speech x-webkit-grammar="bUIltin:search"/>
+					<input type="text" id="address" placeholder="送餐地址" x-webkit-speech x-webkit-grammar="bUIltin:search" value="<?php if($address){echo $address;}?>"/>
 				</div>
 				<div class="addressInfo">请选择送出时间/time:
 				<select id="sendTime">
