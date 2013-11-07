@@ -66,6 +66,7 @@ if($_GET["id"]){
 		}?>
 	</div>
 	<div id="image-frame"></div>
+	<div id="return-home" class="home click"></div>
 	<div id="content">
 		<div id="topContent" style="position:relative;">
 			<!--img src="./images/slide/1.jpg" alt=""/-->

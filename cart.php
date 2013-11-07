@@ -42,6 +42,7 @@ if(isset($_SESSION["uid"])){
 		}?>
 	</div>
 	<div id="image-frame"></div>
+	<div id="return-home" class="home click"></div>
 	<div id="content">
 		<div id="topContent" style="position:relative;">
 		</div>
