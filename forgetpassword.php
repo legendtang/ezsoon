@@ -19,6 +19,7 @@
 		//	$('.noTextClear').textClear();
 		//});
 		$(document).ready(function(){
+			$("body").on("click",".home",function(){home();});
 			$("body").on("click","#find_password_submit",function(){
 				var username = $("#find_password_username").val();
 				var checkmail = $("#find_password_checkmail").val();
@@ -86,6 +87,7 @@
 		<div id="logo" class="home click"></div>
 	</div>
 	<div id="image-frame"></div>
+	<div id="return-home" class="home click"></div>
 	<div id="content">
 		<div id="infoframe">
 			<div id="pwd-tips">
