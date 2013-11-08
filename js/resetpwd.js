@@ -3,6 +3,12 @@ window.onload = function(){
 		event.preventDefault();
 		find_password();
 	});
+	//$(function() {
+		//	$(".noTextClear").textClear();
+		//});
+		$(document).ready(function(){
+			$("body").on("click",".home",function(){home();});
+		});
 }
 function find_password(){
 	var new_password = $("#new_password").val();

@@ -72,6 +72,8 @@
 			float: right !important;
 			margin: 20px 40px 20px auto;
 			background: url(./images/gpwicon.png) no-repeat -26px -102px;
+			text-decoration: none;
+			border: none;
 		}
 		#find_password_submit:hover{
 			background: url(./images/gpwicon.png) no-repeat -26px -149px;
@@ -97,7 +99,7 @@
 			<div id="form-area">
 				<label for="find_password_username">请输入手机号：</label><input type="text" id="find_password_username" placeholder="请输入手机号"><br />
 				<label for="find_password_checkmail">请输入邮箱地址：</label><input type="text" id="find_password_checkmail" placeholder="请输入注册时填写的邮箱"><br />
-				<div id="find_password_submit"></div>
+				<button id="find_password_submit"></button>
 			</div>
 		</div>
 		<div id="footer">
