@@ -124,7 +124,7 @@ body{
 	background: url(../images/home.png) no-repeat -67px -9px;
 }
 #return-home:hover{
-	background: url(../images/home.png) no-repeat -10px -9px;
+	background: url(../images/home.png) no-repeat -8px -9px
 }
 `#subtitle{
 	width:400px;
