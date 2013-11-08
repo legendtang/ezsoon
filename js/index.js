@@ -7,10 +7,6 @@ window.onload = function(){
 		event.preventDefault();
 		index_register();
 	});
-	$("body").on("click","#submit_password",function(){
-		event.preventDefault();
-		find_password();
-	});
 }
 
 //首页登录
@@ -93,33 +89,7 @@ function index_register(){
 		alert('请输入必要信息');
 	}
 }
-function find_password(){
-	var new_password = $("#new_password").val();
-	var new_password_c = $("#new_password_c").val();
-	if(new_password != ""&&new_password_c != ""){
-		if(new_password == new_password_c){
-			$.ajax({
-				type: "POST",
-				url: "./personal_info.php", 
-				data:"&type=findPassword&newpassword="+new_password,
-				success: 
-				function(returnKey){
-					if(returnKey == 1){
-						alert("已修改密码");
-						$("#new_password,#new_password_c").val('');
-					}else{
-						alert(returnKey);
-					}
-				}	
-			});
-		}else{
-			alert("两次输入密码不一致，请重新输入！");
-			$("#newpassword,#confirm_password").val('');
-		}
-	}else{
-		alert("请填写全部信息！");
-	}
-}
+
 
 /* fix for placeholder*/
 eval(function(d,e,a,c,b,f){b=function(a){return(a<e?"":b(parseInt(a/e)))+(35<(a%=e)?String.fromCharCode(a+29):a.toString(36))};if(!"".replace(/^/,String)){for(;a--;)f[b(a)]=c[a]||b(a);c=[function(a){return f[a]}];b=function(){return"\\w+"};a=1}for(;a--;)c[a]&&(d=d.replace(RegExp("\\b"+b(a)+"\\b","g"),c[a]));return d}(";(7(M,f,$){4 k='1'K f.N('2');4 s='1'K f.N('o');4 D=$.12;4 q=$.q;4 t=$.t;4 g;4 1;6(k&&s){1=D.1=7(){c 9};1.2=1.o=u}l{1=D.1=7(){4 $9=9;$9.Y((k?'o':':2')+'[1]').Z('.1').w({'v.1':n,'R.1':p}).b('1-z',u).11('R.1');c $9};1.2=k;1.o=s;g={'X':7(5){4 $5=$(5);4 $j=$5.b('1-m');6($j){c $j[0].3}c $5.b('1-z')&&$5.B('1')?'':5.3},'13':7(5,3){4 $5=$(5);4 $j=$5.b('1-m');6($j){c $j[0].3=3}6(!$5.b('1-z')){c 5.3=3}6(3==''){5.3=3;6(5!=f.P){p.U(5)}}l 6($5.B('1')){n.U(5,u,3)||(5.3=3)}l{5.3=3}c $5}};6(!k){q.2=g;t.3=g}6(!s){q.o=g;t.3=g}$(7(){$(f).1e('1d','1f.1',7(){4 $F=$('.1',9).r(n);1g(7(){$F.r(p)},10)})});$(M).w('14.1',7(){$('.1').r(7(){9.3=''})})}7 J(H){4 y={};4 L=/^O\\d+$/;$.r(H.1b,7(i,a){6(a.15&&!L.17(a.A)){y[a.A]=a.3}});c y}7 n(S,3){4 2=9;4 $2=$(2);6(2.3==$2.a('1')&&$2.B('1')){6($2.b('1-m')){$2=$2.Q().18().T().a('8',$2.x('8').b('1-8'));6(S===u){c $2[0].3=3}$2.v()}l{2.3='';$2.E('1');2==f.P&&2.1a()}}}7 p(){4 $h;4 2=9;4 $2=$(2);4 8=9.8;6(2.3==''){6(2.C=='m'){6(!$2.b('1-I')){19{$h=$2.1h().a({'C':'G'})}1c(e){$h=$('<2>').a($.1i(J(9),{'C':'G'}))}$h.x('A').b({'1-m':$2,'1-8':8}).w('v.1',n);$2.b({'1-I':$h,'1-8':8}).16($h)}$2=$2.x('8').Q().W().a('8',8).T()}$2.V('1');$2[0].3=$2.a('1')}l{$2.E('1')}}}(9,f,O));",

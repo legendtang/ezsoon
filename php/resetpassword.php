@@ -13,10 +13,9 @@ $array = explode('.',base64_decode($p));
  * $array[1] 为我们生成的字符串
 */
 //好了，我们开始进行匹配工作吧。
-
-$sql = mysql_query("select password from user where phone = '".trim($array['0'])."'");
+$sql = mysql_query("select * from user where phone = '".trim($array['0'])."'");
 $rs=mysql_fetch_array($sql);
-
+$uid = $rs["ID"];
 $password = $rs['password'];
 /**
  * 产生配置码 
@@ -27,9 +26,25 @@ $password = $rs['password'];
 */
 if( $array['1'] === $checkCode ){
 	echo $array['0'];
+	
+	echo '<div id="main">
+				<input type="text" id="new_password">
+				<input type="text" id="new_password_c">
+				<button type="submit" id="submit_password">修改密码</button>
+		</div>';
 	echo '<script type="text/javascript" src="../js/jquery.js"></script>
-	<script type="text/javascript" src="../js/index.js"></script>';
-	echo '<input type="text" id="new_password"><input type="text" id="new_password_c"><button type="submit" id="submit_password">修改密码</button>';
+		<script type="text/javascript" src="../js/resetpwd.js"></script>
+		<script type="text/javascript">var uid = '.$uid.'</script>';
+}else{
+	echo '无效链接';
 }
+}else if(isset($_POST["newpassword"])&&isset($_POST["uid"])){
+	$newpassword = $_POST["newpassword"];
+	$uid = $_POST["uid"];
+	if(mysql_query("UPDATE user SET password = '$newpassword' WHERE ID = $uid")){
+		echo 1;
+	}else{
+		echo 2;
+	}
 }
 ?>
