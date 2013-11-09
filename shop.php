@@ -98,14 +98,10 @@ if($_GET["id"]){
 						}
 					?>
 				</ul>
-				<div id="foodDesr" class="shadow target_box dn">
-					<img src="http://img01.e23.cn/2013/0525/20130525113115152.jpg"></img>
-					<p class="desr">老干妈薯条 + 茄子炒西瓜 + 黑椒葡萄汁 + 酱烧双皮奶</p>
-				</div>
+				
 				<div id="customContainer" class="custom_container"></div>
 				<div id="menu">
-					<?php	
-						
+					<?php
 						for($i = 0;$i<$nav_num;$i++){
 							$title = 0;
 							foreach($menu as $v){
@@ -114,24 +110,31 @@ if($_GET["id"]){
 										echo '<ul><div id="Nav'.($i+1).'" class="subNav">'.$shop_type[$i].'</div>';
 										$title = 1;
 									}
+									
 									echo '<li id="f_'.$v[0].'" class="item ';
 									if($v[5])echo 'available';
-									if($v[7] != null)echo '" title="'.$v[7].'"';
-									echo '" name="'.$v[0].'"><p id="desrTrigger" point="foodDesr">'.$v[1].'</p><span>￥'.$v[3].'</span>'.'</li>';
+									echo '" name="'.$v[0].'"><p id="desrTrigger_'.$v[0].'" point="foodDesr_'.$v[0].'">'.$v[1].'</p><span>￥'.$v[3].'</span>'.'</li>';
+									if($v[7] != null||$v[4] != null){
+										echo '<div id="foodDesr_'.$v[0].'" class="shadow target_box dn">';
+										if($v[4] != null)echo '<img src="'.$v[4].'"></img>';
+										if($v[7] != null)echo '<p class="desr">'.$v[7].'</p>';
+										echo '</div>';
+										echo '<script type="text/javascript">
+												$("#desrTrigger_'.$v[0].'").powerFloat({
+													targetMode: null,
+													targetAttr: "src",
+													targetAttr: "point",
+													container: $("#customContainer"),
+													offsets:{x:20,y:20}
+												});
+											</script>';
+									}
 								}
 							}
 							echo '</ul>';
 						}
 					?>
 				</div>
-				<script type="text/javascript">
-					$("#desrTrigger").powerFloat({
-					    targetMode: null,
-					    targetAttr: "point",
-					    container: $("#customContainer"),
-						offsets:{x:20,y:20}
-					});
-				</script>
 			</div>
 			<div id="rightContent">
 				<?php 
