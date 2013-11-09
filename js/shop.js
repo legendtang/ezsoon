@@ -10,6 +10,6 @@ window.onload = function(){
 	$("#rightContent").on('click',"#pay",function(){
 		window.location.href = './cart.php';
 	});
-	$( document ).tooltip();
+	//$( document ).tooltip();
 }
 
