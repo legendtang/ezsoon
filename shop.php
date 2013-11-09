@@ -125,7 +125,7 @@ if($_GET["id"]){
 													targetAttr: "src",
 													targetAttr: "point",
 													container: $("#customContainer"),
-													offsets:{x:20,y:20}
+													offsets:{x:0,y:0}
 												});
 											</script>';
 									}
